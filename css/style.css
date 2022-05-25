@@ -1,0 +1,16 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/underconst.png");
+    background-color: #cec4c4;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+   }
+
+.copyrights {
+
+    position: relative;
+    top: 10%;
+    left: 50%;
+}
+ 
