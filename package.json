@@ -1,0 +1,23 @@
+{
+  "name": "singhhimansh.github.io",
+  "version": "1.0.0",
+  "description": "Hi wonderer!\r Welcome",
+  "main": "index.js",
+  "scripts": {
+    "watch": "npx tailwindcss -i tailwind.css -o ./css/style.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singhhimansh/singhhimansh.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/singhhimansh/singhhimansh.github.io/issues"
+  },
+  "homepage": "https://github.com/singhhimansh/singhhimansh.github.io#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.1.6"
+  }
+}
