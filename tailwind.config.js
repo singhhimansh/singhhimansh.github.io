@@ -2,7 +2,19 @@
 module.exports = {
   content: ["*.html"],
   theme: {
-    extend: {},
-  },
-  plugins: [],
+    extend: {
+
+      colors: {
+        deepocean: '#0a192f',
+  
+      },
+
+      
+
+
+    },
+
+    
+    plugins: [],
+  }
 }
