@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer components {
     .moveup {
         @apply transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none;
@@ -11,5 +12,5 @@
         @apply animate-bounce;
     }
     
+    
 }
-
