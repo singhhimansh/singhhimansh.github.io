@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d105b816.css",
+    "main.js": "/static/js/main.e4257abd.js",
+    "static/js/787.6b1c0abb.chunk.js": "/static/js/787.6b1c0abb.chunk.js",
+    "static/media/Himanshu_Singh.pdf": "/static/media/Himanshu_Singh.69a7f1224149169fe85b.pdf",
+    "static/media/HSc15.png": "/static/media/HSc15.f73a17b8fbd7310e4233.png",
+    "index.html": "/index.html",
+    "main.d105b816.css.map": "/static/css/main.d105b816.css.map",
+    "main.e4257abd.js.map": "/static/js/main.e4257abd.js.map",
+    "787.6b1c0abb.chunk.js.map": "/static/js/787.6b1c0abb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d105b816.css",
+    "static/js/main.e4257abd.js"
+  ]
+}
