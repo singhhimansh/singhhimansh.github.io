@@ -1,5 +1,6 @@
 // import './css/Home.css';
 import Navbar from './Navbar';
+import Intro from './Introduction';
 
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -94,27 +95,25 @@ function Home() {
         </div>
       </div>
 
-      <main>
+      <main className='flex justify-center'>
           {/* Name in middle */}
-        <h1 className="mt-20 text-center text-sky-500 text-base">Hi Wonderer!</h1>
-        <h1 className="mt-10 text-center text-sky-400 text-2xl">
-          I'm Himanshu Singh
-        </h1>
-        <h1 className="mt-10 text-center text-sky-400 text-xl">
-          This site is under developement. Coming live soon!
-        </h1>
+        <div className='Container px-10 w-5/6 flex flex-col items-center'>
+        
+          <Intro />
 
-          {/* aboutme  */}
+            {/* aboutme  */}
 
-          {/* experiences  */}
+            {/* experiences  */}
 
-          {/* Projects  */}
+            {/* Projects  */}
 
-          {/* skills Table */}
+            {/* skills Table */}
 
-          {/* Interests  */}
+            {/* Interests  */}
 
-          {/* contacts details  */}
+            {/* contacts details  */}
+
+          </div>
       </main>
 
           {/* copyright  */}
