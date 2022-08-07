@@ -2,14 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import Home from './components/Home';
+import Navbar from './components/Navbar';
 import reportWebVitals from './reportWebVitals';
 import './components/css/tailwind.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <Navbar />
+    {/* main content */}
     <Home />
-    {/* <Navbar /> */}
   </React.StrictMode>
 );
 

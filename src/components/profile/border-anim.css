@@ -1,21 +1,25 @@
 
 .dp {
-    position: absolute;
+    position: relative;
     width: 280px;
     height: 280px;
     display: flex;
+    /* float: right; */
     justify-content: center;
     align-items: center;    
     border-radius: 50%;
     overflow: hidden;
-    bottom: -50px;
-    right: 150px;
-    transition: 300ms;
+    /* bottom: 1px; */
+    /* bottom: -50px;
+    right: 150px; */
+    /* right: 1px; */
+    transition: 600ms;
 
 }
 
 .dp:hover {
     transform: scale(1.08);
+
 }
 
 .dp img{
@@ -27,7 +31,7 @@
     border-radius: 50%;
     object-fit:cover;
     object-position:-65px 0px;
-    filter: brightness(0.8) contrast(1.06);
+    filter: brightness(0.6) contrast(1.06);
 
 }
 
@@ -45,19 +49,18 @@
     position: absolute;
     /* background: linear-gradient(#36e7f4,#f9d90a); */
     /* background-color: #eddc67; */
-    background-color: #36e7f4;
+    background-color: #36aef4;
     width: 95%;
     height: 95%;
-    animation: borderrotate 6s linear infinite ;
-    animation-duration:normal;
-    transition: 400ms;
+    animation: borderrotate 10s linear infinite ;
+    /* animation-duration:normal; */
+    transition: 600ms;
 
 }
 
 .dp:hover::before{
     background-color: rgb(16 185 129);
-    animation-direction: reverse;
-    transform: scale3d(1.5);
+    animation-duration: 6s;
 }
 
 @keyframes borderrotate {

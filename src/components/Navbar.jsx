@@ -1,7 +1,11 @@
 import logo from './images/HSc15.png';
 import resume from './Himanshu_Singh.pdf'
 
+import React, { useState } from 'react'
+
 function Navbar() {
+
+
 
   // function Menu(e) {
 
@@ -25,18 +29,24 @@ function Navbar() {
 
   //   }
 
+    const hambergur =(e)=>{
+      console.log(e)
+      e.name === 'menu' ? (e.name='menuclose') : (e.name='menu')
+
+      
+    }
 
 
 
     return (
-      <div className="navbar">
-          <div className="m-6 flex justify-between">
+      <div className="navbar m-6 ">
+          <div className="flex justify-between">
             {/* logo  */}
             <div className="flex flex-1 items-center justify-between">
               <a href="." className="ml-6" target="_parent" rel="noopener noreferrer"><img src={logo}
                   alt="HS" className="w-12" srcSet="" /></a>
 
-              <button className="text-3xl cursor-pointer mx-2 md:hidden block">
+              <button className="text-3xl cursor-pointer mx-2 md:hidden block" onClick={(e)=>hambergur(e)}>
                 {/* <!-- <ion-icon ></ion-icon> --> */}
                 <svg name="menu" id="hamburgerSVG"  className="fill-slate-500 w-7 hover:fill-emerald-200"
                   xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -50,26 +60,25 @@ function Navbar() {
             <div id="listparentdiv"
               className="md:visible navbar mr-4 shadow align-middle md:flex md:items-center md:justify-between invisible z-[1] opacity-0 md:opacity-100 transition-all ease-in-out duration-500">
               <ul id="navbarlist"
-                className="w-full flex flex-col md:flex-row items-center text-gray-200 bg-deepocean md:bg-none border-opacity-60 border-y-2 border-slate-600 border-solid md:border-none md:z-auto md:static absolute left-0 divide-y divide-opacity-60 divide-slate-400 md:divide-none md:w-auto md:py-0 py-4 md:pl-0 pl-7 top-[100px]">
+                className="w-full flex flex-col md:flex-row items-center text-gray-200 bg-deepocean md:bg-none border-opacity-100 border-y-2 border-slate-600 border-solid md:border-none md:z-auto md:static absolute left-0 divide-y divide-opacity-60 divide-slate-400 md:divide-none md:w-auto md:py-0 py-4 md:pl-0 pl-7 top-[100px]">
                 <li className="p-5 hover:text-emerald-300 moveup">
-                  <a href="#" className="" target="_blank" rel="noopener noreferrer"><span className="text-emerald-300">h.
-                    </span>home( )</a>
+                  <a href="#" className="" target="_blank" rel="noopener noreferrer"><span className="text-emerald-300">h. </span>home( )</a>
                 </li>
                 <li className="p-5 hover:text-emerald-300 moveup">
-                  <a href="#" className="" target="_blank" rel="noopener noreferrer"><span className="text-emerald-300">h.</span>
+                  <a href="#" className="" target="_blank" rel="noopener noreferrer"><span className="text-emerald-300">h. </span>
                     projects( )</a>
                 </li>
                 <li className="p-5 hover:text-emerald-300 moveup">
-                  <a href="#" className="" target="_blank" rel="noopener noreferrer"><span className="text-emerald-300">h.</span>
+                  <a href="#" className="" target="_blank" rel="noopener noreferrer"><span className="text-emerald-300">h. </span>
                     about( )</a>
                 </li>
                 <li className="p-5 hover:text-emerald-300 moveup">
-                  <a href="#" className="" target="_blank" rel="noopener noreferrer"><span className="text-emerald-300">h.</span>
+                  <a href="#" className="" target="_blank" rel="noopener noreferrer"><span className="text-emerald-300">h. </span>
                     contact( )</a>
                 </li>
                 <li className=" hover:text-emerald-300 moveup border-2 border-emerald-300  font-[Poppins] duration-300 px-6 py-2  hover:bg-cyan-900 rounded">
                   <a href={resume} className="" target="_blank" rel="noopener noreferrer"><span
-                      className="text-emerald-300 ">h.</span> resume( )</a>
+                      className="text-emerald-300 ">h. </span> resume( )</a>
                 </li>
               </ul>
             </div>

@@ -1,22 +1,18 @@
 // import './css/Home.css';
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 import Intro from './Introduction';
 
-import { FaGithub } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaFacebook } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { SiLinktree } from "react-icons/si";
-// import { SiGmail } from "react-icons/si";
+// import {angularpng} from "./images/skills"
 
 function Home() {
   return (
-    <div className="Home">
-          {/* Navigationbar  */}
-      <Navbar />
+    <div className="Home border-0 border-red-800  ">
 
           {/* leftside: social media links */}
-      <div className="fixed bottom-0 left-14">
+      <div className="fixed bottom-0 left-14 invisible md:visible ">
         <ul className="w-5 flex flex-col">
           <li name="github" className="py-3 moveup">
             <a href="https://github.com/singhhimansh/" target="_blank" className="hover:text-emerald-300">
@@ -81,7 +77,7 @@ function Home() {
       </div>
 
           {/* rightside: mail */}
-      <div className="w-6 h-80 fixed bottom-0 right-14 flex flex-col justify-between">
+      <div className="w-6  h-80 fixed bottom-0 right-14 flex flex-col justify-between invisible md:visible">
         <div className="moveup rotate-90">
           <span className="moveup tracking-widest text-slate-500 hover:text-emerald-300 hover:fill-emerald-300 ">
             <a className="" href="mailto:hsingh2@ch.iitr.ac.in" target="_blank" rel="noopener noreferrer">
@@ -95,11 +91,29 @@ function Home() {
         </div>
       </div>
 
-      <main className='flex justify-center'>
+      <main className=' flex justify-center border-0 border-cyan-400 '>
           {/* Name in middle */}
-        <div className='Container px-10 w-5/6 flex flex-col items-center'>
+        <div className='w-11/12 md:w-8/12 md:px-2 border-0 border-purple-600  flex flex-col'>
         
           <Intro />
+
+          {/* Technologies and Skills */}
+          <div className=' my-20 self-start justify-center '>
+                <h1 className="text-slate-400 font-mono md:text-2xl">Technologies I have worked with:</h1>
+                <div className="md:w-3/5  my-8 flex flex-row flex-wrap gap-x-2 gap-y-3 md:gap-x-6 md:gap-y-8 ">
+                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Python 3'  src={require('./images/skills/python.png')} alt="" />
+                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='HTML5' src={require("./images/skills/html.png")} alt="" />
+                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='CSS3' src={require('./images/skills/css.png')} alt="" />
+                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Javascript'  src={require('./images/skills/js.png')} alt="" />
+                  <img className='w-12 shrink m-3 object-scale-down scale-[1.3] grayscale hover:grayscale-0 hover:scale-[1.4] transition ' title='Bootstrap 5'  src={require('./images/skills/bootstrap.png')} alt="" /> 
+                  <img className='w-12 shrink m-3 object-scale-down scale-[1.3]  grayscale hover:grayscale-0 hover:scale-[1.4] transition ' title='TailwindCSS'  src={require('./images/skills/tailwind.png')} alt="" /> 
+                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='React.js'  src={require('./images/skills/react.png')} alt="" /> 
+                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Django'  src={require('./images/skills/django.png')} alt="" />
+                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='MySQL'  src={require('./images/skills/mysql.png')} alt="" />
+                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Git'  src={require('./images/skills/github.png')} alt="" />
+                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Photoshop'  src={require('./images/skills/photoshop.png')} alt="" /> 
+                </div>
+          </div>
 
             {/* aboutme  */}
 
@@ -113,7 +127,7 @@ function Home() {
 
             {/* contacts details  */}
 
-          </div>
+        </div>
       </main>
 
           {/* copyright  */}
