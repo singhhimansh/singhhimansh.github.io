@@ -1,17 +1,25 @@
 {
   "files": {
-    "main.css": "/static/css/main.d105b816.css",
-    "main.js": "/static/js/main.e4257abd.js",
+    "main.css": "/static/css/main.0887b080.css",
+    "main.js": "/static/js/main.c8dc3913.js",
     "static/js/787.6b1c0abb.chunk.js": "/static/js/787.6b1c0abb.chunk.js",
+    "static/media/him.jpg": "/static/media/him.f6dea17b5dec4b745800.jpg",
     "static/media/Himanshu_Singh.pdf": "/static/media/Himanshu_Singh.69a7f1224149169fe85b.pdf",
+    "static/media/python.png": "/static/media/python.49c4c5298daab61efe71.png",
     "static/media/HSc15.png": "/static/media/HSc15.f73a17b8fbd7310e4233.png",
+    "static/media/photoshop.png": "/static/media/photoshop.1ef6efea8874244dbc22.png",
+    "static/media/bootstrap.png": "/static/media/bootstrap.c5dedb5348b058d36661.png",
+    "static/media/mysql.png": "/static/media/mysql.a4bbe945d961bfa5c9c9.png",
+    "static/media/tailwind.png": "/static/media/tailwind.d27fd4a43da4b67d71ce.png",
+    "static/media/react.png": "/static/media/react.a0ea33fe9c15986f7833.png",
+    "static/media/css.png": "/static/media/css.2020bfd28c90ae2dae19.png",
     "index.html": "/index.html",
-    "main.d105b816.css.map": "/static/css/main.d105b816.css.map",
-    "main.e4257abd.js.map": "/static/js/main.e4257abd.js.map",
+    "main.0887b080.css.map": "/static/css/main.0887b080.css.map",
+    "main.c8dc3913.js.map": "/static/js/main.c8dc3913.js.map",
     "787.6b1c0abb.chunk.js.map": "/static/js/787.6b1c0abb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.d105b816.css",
-    "static/js/main.e4257abd.js"
+    "static/css/main.0887b080.css",
+    "static/js/main.c8dc3913.js"
   ]
 }
