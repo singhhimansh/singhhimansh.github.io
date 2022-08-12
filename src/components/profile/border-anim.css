@@ -75,3 +75,27 @@
     }
 }
 
+
+@media only screen and (max-width: 738px) {
+
+    .dp {
+        border-radius: 5%;
+    }
+
+    .dp img{
+        border-radius: 5%;
+        object-position:-40px 0px;
+  
+    }
+
+    .dp::after{
+        border-radius: 5%;
+    
+    }
+    
+    .dp::before{
+        width: 85%;
+        height: 140%;
+    }
+    
+}

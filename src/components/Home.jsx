@@ -1,6 +1,7 @@
 // import './css/Home.css';
 // import Navbar from './Navbar';
 import Intro from './Introduction';
+import Pallets from './Pallets';
 import Tabs from './Tabs';
 
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
@@ -101,9 +102,12 @@ function Home() {
 
           {/* Technologies and Skills */}
           <div className='my-20 self-start justify-center '>
-                <h1 className="text-slate-400 font-mono md:text-2xl">Technologies I have worked with:</h1>
+                <div className="my-5 flex items-center gap-4">
+                  <h1 className="text-slate-300 font-semibold tracking-wide text-2xl md:text-3xl whitespace-nowrap">Technologies I know</h1>
+                  <hr className="whitespace-nowrap w-1/6 h-px bg-slate-400 " />
+                </div>
+
                 <div className="md:w-3/5  my-8 flex flex-row flex-wrap gap-x-2 gap-y-3 md:gap-x-6 md:gap-y-8 ">
-                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Python 3'  src={require('./images/skills/python.png')} alt="" />
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='HTML5' src={require("./images/skills/html.png")} alt="" />
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='CSS3' src={require('./images/skills/css.png')} alt="" />
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Javascript'  src={require('./images/skills/js.png')} alt="" />
@@ -112,17 +116,18 @@ function Home() {
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='React.js'  src={require('./images/skills/react.png')} alt="" /> 
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Django'  src={require('./images/skills/django.png')} alt="" />
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='MySQL'  src={require('./images/skills/mysql.png')} alt="" />
+                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Python 3'  src={require('./images/skills/python.png')} alt="" />
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Git'  src={require('./images/skills/github.png')} alt="" />
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Photoshop'  src={require('./images/skills/photoshop.png')} alt="" /> 
                 </div>
           </div>
 
-          {/* aboutme  */}
 
           {/* experiences  */}
+          <Tabs />
 
           {/* Projects  */}
-          <Tabs />
+          <Pallets />
 
           {/* <Tabs /> */}
 

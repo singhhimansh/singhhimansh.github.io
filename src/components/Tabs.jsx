@@ -1,50 +1,58 @@
-
 import { GoMarkGithub,GoLinkExternal } from 'react-icons/go';
-import projects from './data/projects.json';
+import React, { useState } from 'react';
 
-function Tabs(){
+
+export default function Tabs(){
+
+    const [worktab, setworktab] = useState(1);
+
+
+
+    function handleWorkDisplay(e) {
+
+        setworktab(e.target.id);
+        
+    }
+
+
+
+
     return (
-
-        <div className="text-slate-400">
-            <h1 className="inline-block my-5 text-slate-300 font-semibold tracking-wide text-2xl md:text-3xl whitespace-nowrap">Projects i have built</h1><hr className="inline-block  whitespace-nowrap w-1/6 h-px m-4 bg-slate-400 align-middle text " />
-
-            <div className=''>
-                { projects.map((project)=>{
-
-                    return(
-                        <div key={project.id} className={`my-24 md:my-32 md:mx-10 h-96 relative md:grid md:grid-cols-12 gap-3 items-center ${ project.id % 2 === 1 ? "text-right" : "text-left" } `}>
-                         
-                           <div className={`z-[1] p-5 md:p-0 h-[90%]  bg-deepocean/90 md:bg-transparent absolute top-0 left-0 md:relative flex flex-col w-full  ${ project.id % 2 === 1 ? "md:col-span-8  lg:col-span-6 md:col-end-13 lg:col-end-13" :"md:col-span-8 lg:col-span-6 md:col-start-1 "  }`}>
-                                <h1 className="font-bold tracking-wider text-3xl hover:text-emerald-300 duration-200">{project.title}</h1>
-                                <h2 className="mt-1 mb-6 text-base">{project.subtitle}</h2>
-                                <p className="z-[1] text-sm my-4 md:p-5 md:bg-gray-800 rounded-md text-slate-400">{project.description}</p>
-                                <div className={`text-sm flex flex-nowrap gap-5 font-mono ${ project.id % 2 === 1 ? "justify-end" : "justify-start" } `}>
-                                    {
-                                        project.tech.map((tech)=>{
-                                            return (
-                                                <h3>{tech}</h3>
-                                            )
-                                        })
-                                    }
-                                </div>
-                                <div className='m-2'>
-                                <a href={project.git} target="_blank" rel="noopener noreferrer"><GoMarkGithub className='inline mr-4 hover:fill-emerald-300 duration-200 w-5 h-5   '/></a>
-                                <a href={project.url} target="_blank" rel="noopener noreferrer"><GoLinkExternal className='inline hover:fill-emerald-300 duration-200 w-5 h-5  '/></a>
-                                </div>
-
-                            </div>
-                           
-                            {/* <div className= "overflow-hidden rounded-md"> */}
-                            <img className={`absolute top-0 left-0 z-0 h-[90%] rounded-lg object-fill saturate-0 hover:saturate-100 duration-200 self-center ${ project.id % 2 === 1 ? "md:col-start-1 md:col-span-8" : "md:col-start-5 md:col-span-8" }`} src={require(`${project.img}`)} alt="" />
-                            {/* </div> */}
-
-
-                            
-                        </div>
-                    );
-                })
-                }
+        <div className="WorkTabs">
+            <div className="my-5 flex items-center gap-4">
+                <h1 className="text-slate-300 font-semibold tracking-wide text-2xl md:text-3xl whitespace-nowrap">I have worked at</h1>
+                <hr className="whitespace-nowrap w-1/6 h-1px bg-slate-400 " />
             </div>
+
+            <div className="w-3/4 h-80 m-16 flex gap-3 text-slate-400 bg-emerald-100/5 rounded-md ">
+                <div className="Workbutton flex flex-col text-sm ">
+                    <button key="1" id='1' onClick={(e)=>handleWorkDisplay(e)} className=" p-3 px-4  w-full text-left border-l rounded-tl-md  border-emerald-300/25 whitespace-nowrap hover:text-emerald-300 hover:bg-emerald-100/10 duration-300">SGS School</button>
+                    <button key="2" id='2' onClick={(e)=>handleWorkDisplay(e)} className="p-3 px-4 w-full text-left border-l border-emerald-300/25 whitespace-nowrap hover:text-emerald-300 hover:bg-emerald-100/10 duration-300">Next</button>
+                </div>
+
+                <div className="Workdisplay">
+                    <div key="1" id='1' className={`m-2 pr-3 ${ worktab === 1 ? "visible":"invisible"  }  `}>
+                        <h1 className=" mb-4 font-semibold text-2xl text-slate-300/90">School website designed</h1>
+                        <p className="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis quas impedit nobis deleniti itaque, odio suscipit vero, animi ratione dolor veniam neque incidunt fugiat porro error nihil ipsam cupiditate ad cum id voluptatibus deserunt quos culpa. Ab praesentium porro atque error maiores commodi, illo fuga deserunt ea odio saepe similique! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum soluta facere dolores reprehenderit sequi quis suscipit illo earum quam, animi ea doloremque voluptas cum est iure dignissimos nam dolorem at!</p>
+                        <div className="m-3">
+                            <a href="https://github.com/singhhimansh/SGS-School" target="_blank" rel="noopener noreferrer"><GoMarkGithub className='inline mr-4 hover:fill-emerald-300 duration-200 w-5 h-5   '/></a>
+                            <a href="https://sgsschool.in/" target="_blank" rel="noopener noreferrer"><GoLinkExternal className='inline hover:fill-emerald-300 duration-200 w-5 h-5  '/></a>
+                        </div>
+
+                    </div>
+                    <div key="2" id='2' className={`m-2 pr-3 ${ worktab === 2 ? "visible":"invisible"}`} >
+                        <h1 className=" mb-4 font-semibold text-2xl text-slate-300/90">Next work</h1>
+                        <p className="text-sm">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis quas impedit nobis deleniti itaque, odio suscipit vero, animi ratione dolor veniam neque incidunt fugiat porro error nihil ipsam cupiditate ad cum id voluptatibus deserunt quos culpa. Ab praesentium porro atque error maiores commodi, illo fuga deserunt ea odio saepe similique! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum soluta facere dolores reprehenderit sequi quis suscipit illo earum quam, animi ea doloremque voluptas cum est iure dignissimos nam dolorem at!</p>
+                        <div className="m-3">
+                            <a href="https://github.com/singhhimansh/SGS-School" target="_blank" rel="noopener noreferrer"><GoMarkGithub className='inline mr-4 hover:fill-emerald-300 duration-200 w-5 h-5   '/></a>
+                            <a href="https://sgsschool.in/" target="_blank" rel="noopener noreferrer"><GoLinkExternal className='inline hover:fill-emerald-300 duration-200 w-5 h-5  '/></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
 
 
 
@@ -52,5 +60,3 @@ function Tabs(){
 
     );
 }
-
-export default Tabs;
