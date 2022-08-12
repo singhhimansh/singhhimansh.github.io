@@ -1,0 +1,45 @@
+[
+    {
+        "id":1,
+        "title": "Aashiyana.in",
+        "subtitle" :"Rental Property site",
+        "description":"Fetch rental sites from an API Search sites using 4 filters - Rent, BHK, Furnishing or City Built using react.js and tailwindCss",
+        "img": "./data/img/aashiyana.png",
+        "tech": [ "React.js", "TailwindCss", "Animate.css" ],
+        "url": "https://singhhimansh.github.io/Real_Estate/",
+        "git": "https://github.com/singhhimansh/Real_Estate"
+    },
+
+    {
+        "id":2,
+        "title": "Things To-Do",
+        "subtitle" :"Responsive ToDo list app",
+        "description":"Add, delete daily tasks or check them completed Keep count of completed tasks Fetches dummy tasks from API",
+        "img": "./data/img/todo.png",
+        "tech": [ "React.js", "TailwindCss", "Animate.css" ],
+        "url": "https://singhhimansh.github.io/todo-react/",
+        "git": "https://github.com/singhhimansh/todo-react"
+    },
+
+    {
+        "id":3,
+        "title": "Sticky Notes",
+        "subtitle" :"Keep your notes pasted",
+        "description":"Save & delete notes (with title message) in local storage. Search box to search for a particular note. Delete all notes with one click",
+        "img": "./data/img/sticky.png",
+        "tech": [ "HTML5", "CSS3", "Bootstrap", "Javascript" ],
+        "url": "https://singhhimansh.github.io/Sticky-Notes/",
+        "git": "https://github.com/singhhimansh/Sticky-Notes"
+    },
+
+    {
+        "id":4,
+        "title": "The Shopkart",
+        "subtitle" :"An e-commerce site",
+        "description":"Fetch rental sites from an API Search sites using 4 filters - Rent, BHK, Furnishing or City Built using react.js and tailwindCss",
+        "img": "./data/img/shopkart.png",
+        "tech": [ "HTML5", "CSS3","Bootstrap" ,"Javascript" ],
+        "url": "https://singhhimansh.github.io/Shopkart/",
+        "git": "https://github.com/singhhimansh/Shopkart"
+    }
+]
