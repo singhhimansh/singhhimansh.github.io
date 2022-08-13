@@ -39,7 +39,7 @@ function Navbar() {
 
 
     return (
-      <div className="navbar m-6 ">
+      <section className="navbar m-6 ">
           <div className="flex justify-between">
             {/* logo  */}
             <div className="flex flex-1 items-center justify-between">
@@ -62,18 +62,18 @@ function Navbar() {
               <ul id="navbarlist"
                 className="w-full flex flex-col md:flex-row items-center text-gray-200 bg-deepocean md:bg-none border-opacity-100 border-y-2 border-slate-600 border-solid md:border-none md:z-auto md:static absolute left-0 divide-y divide-opacity-60 divide-slate-400 md:divide-none md:w-auto md:py-0 py-4 md:pl-0 pl-7 top-[100px]">
                 <li className="p-5 hover:text-emerald-300 moveup">
-                  <a href="#" className="" target="_blank" rel="noopener noreferrer"><span className="text-emerald-300">h. </span>home( )</a>
+                  <a href="#intro" className="" target="_parent" rel="noopener noreferrer"><span className="text-emerald-300">h. </span>home( )</a>
                 </li>
                 <li className="p-5 hover:text-emerald-300 moveup">
-                  <a href="#" className="" target="_blank" rel="noopener noreferrer"><span className="text-emerald-300">h. </span>
+                  <a href="#work" className="" target="_parent" rel="noopener noreferrer"><span className="text-emerald-300">h. </span>
+                    work( )</a>
+                </li>
+                <li className="p-5 hover:text-emerald-300 moveup">
+                  <a href="#projects" className="" target="_parent" rel="noopener noreferrer"><span className="text-emerald-300">h. </span>
                     projects( )</a>
                 </li>
                 <li className="p-5 hover:text-emerald-300 moveup">
-                  <a href="#" className="" target="_blank" rel="noopener noreferrer"><span className="text-emerald-300">h. </span>
-                    about( )</a>
-                </li>
-                <li className="p-5 hover:text-emerald-300 moveup">
-                  <a href="#" className="" target="_blank" rel="noopener noreferrer"><span className="text-emerald-300">h. </span>
+                  <a href="#contact" className="" target="_parent" rel="noopener noreferrer"><span className="text-emerald-300">h. </span>
                     contact( )</a>
                 </li>
                 <li className=" hover:text-emerald-300 moveup border-2 border-emerald-300  font-[Poppins] duration-300 px-6 py-2  hover:bg-cyan-900 rounded">
@@ -83,7 +83,7 @@ function Navbar() {
               </ul>
             </div>
           </div>
-      </div>
+      </section>
     );
   }
 

@@ -11,7 +11,7 @@ import { SiLinktree } from "react-icons/si";
 
 function Home() {
   return (
-    <div className="Home border-0 border-red-800  ">
+    <div id='home' className="Home border-0 border-red-800  ">
 
           {/* leftside: social media links */}
       <div className="fixed bottom-0 left-14 invisible md:visible ">
@@ -93,7 +93,7 @@ function Home() {
         </div>
       </div>
 
-      <main className=' flex justify-center border-0 border-cyan-400 '>
+      <main className='flex justify-center border-0 border-cyan-400 '>
 
         <div className='w-11/12 md:w-8/12 md:px-2 border-0 border-purple-600  flex flex-col '>
           
@@ -101,10 +101,10 @@ function Home() {
           <Intro />
 
           {/* Technologies and Skills */}
-          <div className='my-20 self-start justify-center '>
+          <section className='my-20 self-start justify-center '>
                 <div className="my-5 flex items-center gap-4">
                   <h1 className="text-slate-300 font-semibold tracking-wide text-2xl md:text-3xl whitespace-nowrap">Technologies I know</h1>
-                  <hr className="whitespace-nowrap w-1/6 h-px bg-slate-400 " />
+                  <hr className="whitespace-nowrap w-1/6 h-px bg-slate-400 opacity-50" />
                 </div>
 
                 <div className="md:w-3/5  my-8 flex flex-row flex-wrap gap-x-2 gap-y-3 md:gap-x-6 md:gap-y-8 ">
@@ -120,24 +120,71 @@ function Home() {
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Git'  src={require('./images/skills/github.png')} alt="" />
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Photoshop'  src={require('./images/skills/photoshop.png')} alt="" /> 
                 </div>
-          </div>
+          </section>
 
 
-          {/* experiences  */}
+          {/* work experiences  */}
           <Tabs />
 
           {/* Projects  */}
           <Pallets />
 
-          {/* <Tabs /> */}
-
-
-
-          {/* skills Table */}
-
           {/* Interests  */}
 
           {/* contacts details  */}
+          <section className='my-20'>
+            <div className="my-5 flex items-center gap-4">
+                  <h1 className="text-slate-300 font-semibold tracking-wide text-2xl md:text-3xl whitespace-nowrap">Wanna connect ?</h1>
+                  <hr className="whitespace-nowrap w-1/6 h-px bg-slate-400 opacity-50" />
+            </div>
+
+            <div className="">
+
+            </div>
+
+          </section>
+
+
+          {/* copyright */}
+          <section id="copyright" className="copyright m-10 mb-5 flex justify-center text-slate-400" >
+            <div className="flex flex-col items-center">
+                <ul className="flex gap-6 md:gap-16 md:invisible">
+                  <li name="github" className="py-3 moveup">
+                    <a href="https://github.com/singhhimansh/" target="_blank" className="hover:text-emerald-300">
+                      <FaGithub className='w-5 h-5 fill-slate-500 hover:fill-emerald-300'/></a>
+                  </li>
+
+                  <li name="linkedin" className="py-3 moveup">
+                    <a href="https://www.linkedin.com/in/singhhimansh/" target="_blank" className="hover:fill-emerald-300"><FaLinkedin className='w-5 h-5 fill-slate-500 hover:fill-emerald-300'/> </a>
+                  </li>
+
+
+
+                  <li name="instagram" className="py-3 moveup">
+                    <a href="https://www.instagram.com/himanshhh_/" target="_blank" className="">
+                    <GrInstagram className='w-5 h-5 fill-slate-500 hover:fill-emerald-300'/></a>
+                  </li>
+
+
+                  <li name="facebook" className="py-3 moveup">
+                    <a href="https://www.facebook.com/him.signum/" target="_blank" className=""><FaFacebook className='w-5 h-5 fill-slate-500 hover:fill-emerald-300' /></a>
+                  </li>
+
+
+                  <li name="linktree" className="py-3 moveup">
+                    <a href="https://linktr.ee/himanshhh_" target="_blank" className="">
+                      <SiLinktree className='w-5 h-5 fill-slate-500 hover:fill-emerald-300' /></a>
+                  </li>
+                </ul>
+                
+                <div className="mt-3 w-full flex flex-nowrap gap-4 items-center opacity-50 ">
+                  <hr className='w-8 md:w-28 h-px' />
+                  <h1 className="text-xs font-mono uppercase tracking-widest text-slate-400">Himanshu Singh</h1>
+                  <hr className='w-8 md:w-28 h-px' />
+                </div>
+            </div>
+          </section>
+
 
         </div>
       </main>
