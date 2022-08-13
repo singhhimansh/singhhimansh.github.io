@@ -48,8 +48,8 @@
     content: "";
     position: absolute;
     /* background: linear-gradient(#36e7f4,#f9d90a); */
-    /* background-color: #eddc67; */
-    background-color: #36aef4;
+    /* background-color: #36f1f4; */
+    background-color: #3c8b9d;
     width: 95%;
     height: 95%;
     animation: borderrotate 10s linear infinite ;
