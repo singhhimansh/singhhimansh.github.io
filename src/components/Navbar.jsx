@@ -1,5 +1,6 @@
 import logo from './images/HSc15.png';
 import resume from './Himanshu_Singh.pdf'
+import 'animate.css';
 
 import React, { useState } from 'react'
 
@@ -39,7 +40,7 @@ function Navbar() {
 
 
     return (
-      <section className="navbar m-6 ">
+      <section className="navbar m-6 animate__animated animate__fadeInDown ">
           <div className="flex justify-between">
             {/* logo  */}
             <div className="flex flex-1 items-center justify-between">

@@ -1,20 +1,22 @@
-// import './css/Home.css';
-// import Navbar from './Navbar';
 import Intro from './Introduction';
 import Pallets from './Pallets';
 import Tabs from './Tabs';
+import 'animate.css';
 
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { SiLinktree } from "react-icons/si";
-// import {angularpng} from "./images/skills"
+
+
+
+
 
 function Home() {
   return (
     <div id='home' className="Home border-0 border-red-800  ">
 
           {/* leftside: social media links */}
-      <div className="fixed bottom-0 left-14 invisible md:visible ">
+      <div className="fixed bottom-0 left-14 invisible md:visible animate__animated animate__fadeInUp">
         <ul className="w-5 flex flex-col">
           <li name="github" className="py-3 moveup">
             <a href="https://github.com/singhhimansh/" target="_blank" className="hover:text-emerald-300">
@@ -79,7 +81,7 @@ function Home() {
       </div>
 
           {/* rightside: mail */}
-      <div className="w-6  h-[350px] fixed bottom-0 right-14 flex flex-col justify-between invisible md:visible">
+      <div className="w-6  h-[350px] fixed bottom-0 right-14 flex flex-col justify-between invisible md:visible animate__animated animate__fadeInUp">
         <div className="moveup rotate-90">
           <span className="moveup text-sm tracking-wider text-slate-400/70 hover:text-emerald-300 hover:fill-emerald-300 ">
             <a className="" title='s.himanshusingh56@gmail.com' href="mailto:s.himanshusingh56@gmail.com" target="_blank" rel="noopener noreferrer">
@@ -101,9 +103,9 @@ function Home() {
           <Intro />
 
           {/* Technologies and Skills */}
-          <section className='my-20 self-start justify-center '>
+          <section className='my-28 self-start justify-center '>
                 <div className="my-5 flex items-center gap-4">
-                  <h1 className="text-slate-300 font-semibold tracking-wide text-2xl md:text-3xl whitespace-nowrap">Technologies I know</h1>
+                  <h1 className="text-slate-300 capitalize font-semibold tracking-wide text-2xl md:text-3xl whitespace-nowrap">Technologies I know</h1>
                   <hr className="whitespace-nowrap w-1/6 h-px bg-slate-400 opacity-50" />
                 </div>
 
@@ -132,15 +134,16 @@ function Home() {
           {/* Interests  */}
 
           {/* contacts details  */}
-          <section className='my-20'>
-            <div className="my-5 flex items-center gap-4">
-                  <h1 className="text-slate-300 font-semibold tracking-wide text-2xl md:text-3xl whitespace-nowrap">Wanna connect ?</h1>
+          <section id='contact' className='my-36 md:w-2/3 gap-10 flex flex-col items-center self-center'>
+            <div className="my-5 w-full flex items-center justify-center gap-4">
+                  <hr className="whitespace-nowrap w-1/6 h-px bg-slate-400 opacity-50" />
+                  <h1 className="text-slate-300 capitalize font-semibold tracking-wide text-2xl md:text-3xl whitespace-nowrap">Get in touch</h1>
                   <hr className="whitespace-nowrap w-1/6 h-px bg-slate-400 opacity-50" />
             </div>
 
-            <div className="">
-
-            </div>
+            <p className="mb-4 w-4/5 md:w-full  text-slate-400 text-center first-letter:text-xl first-letter:font-medium first-letter:text-emerald-300/80 first-line:text-emerald-200/60">Hey there. Since you have reached down here, implies you must have liked my work. I always look forward to work on new, exciting projects. So whether you want to discuss some project or just wanna say hi, I would love to get back to you.</p>
+            
+            <a href="mailto:s.himanshusingh56@gmail.com" className=''><button className="p-2 px-4  text-slate-400 text-center border-2 border-emerald-400/70 rounded-md hover:bg-emerald-100/5 animate__animated animate__pulse animate__infinite">Say Hello</button></a>
 
           </section>
 

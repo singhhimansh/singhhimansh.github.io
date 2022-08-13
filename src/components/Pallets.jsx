@@ -1,12 +1,13 @@
 
 import { GoMarkGithub,GoLinkExternal } from 'react-icons/go';
 import projects from './data/projects.json';
+import 'animate.css';
 
 function Tabs(){
     return (
         <section id='projects' className="text-slate-400">
             <div className="my-5 flex items-center gap-4">
-                <h1 className="text-slate-300 font-semibold tracking-wide text-2xl md:text-3xl whitespace-nowrap">Projects I have built</h1>
+                <h1 className="text-slate-300 capitalize font-semibold tracking-wide text-2xl md:text-3xl whitespace-nowrap">Projects I have built</h1>
                 <hr className="whitespace-nowrap w-1/6 h-1px bg-slate-400 opacity-50" />
             </div>
 
