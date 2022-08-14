@@ -13,7 +13,7 @@ import { SiLinktree } from "react-icons/si";
 
 function Home() {
   return (
-    <div id='home' className="Home  ">
+    <div id='home' className="Home relative -z-10 ">
 
           {/* leftside: social media links */}
       <div className="fixed bottom-0 left-14 invisible md:visible animate__animated animate__fadeInUp">
