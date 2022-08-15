@@ -7,6 +7,8 @@ import {IoClose} from 'react-icons/io5';
 
 import React, { useState } from 'react'
 
+
+
 function Navbar() {
 
   // hambstat=0 closed
