@@ -57,17 +57,12 @@ function Navbar() {
                 className="mr-4 align-middle md:flex md:items-center  transition-all ease-in-out duration-500">
                 
                 <button name='hambtn' title='menu' id="hambtn" className={`relative text-3xl cursor-pointer mx-2 md:hidden block ${ hambState==='close'? '' : 'z-20 ' }`} onClick={(e)=>handleMenu(e)}>
-                  {/* <svg name="hamsvg" id='hamsvg'  className={`fill-slate-500 w-7  ${ hambState==='close'? '' : 'fill-emerald-200 z-10' } `}
-                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                    <path
-                      d="M0 96C0 78.33 14.33 64 32 64H416C433.7 64 448 78.33 448 96C448 113.7 433.7 128 416 128H32C14.33 128 0 113.7 0 96zM0 256C0 238.3 14.33 224 32 224H416C433.7 224 448 238.3 448 256C448 273.7 433.7 288 416 288H32C14.33 288 0 273.7 0 256zM416 448H32C14.33 448 0 433.7 0 416C0 398.3 14.33 384 32 384H416C433.7 384 448 398.3 448 416C448 433.7 433.7 448 416 448z" />
-                  </svg> */}
                   <CgMenuRight className={`w-9 h-9  stroke-1 ${ hambState==='close'? 'stroke-defslate' : 'hidden' }`}/>
                   <IoClose className={` w-9 h-9  stroke-1 ${ hambState==='close'? 'hidden ' : 'fill-emerald-600/70 animate__animated animate__rotateIn animate__faster' }`}/>
                 </button>
 
                 <div id="menuForMob"
-                  className={`h-screen md:hidden fixed z-10  font-calibre text-lightslate bg-zinc-800 flex flex-col justify-center items-center  gap-10  ${ hambState==='close'? 'hidden' : 'w-2/3  top-0 right-0 touch-none animate__animated animate__slideInRight animate__faster' } `}>
+                  className={`h-screen md:hidden fixed z-10  font-calibre text-lightslate bg-zinc-800 flex flex-col justify-center items-center  gap-10   ${ hambState==='close'? 'hidden top-0 right-0 ' : 'w-2/3  top-0 right-0 touch-none duration-200 ease-in-out transition-all' } `}>
                   
                     <a href="#intro" className="" target="_parent" rel="noopener noreferrer"><button className="p-2 hover:text-emerald-300 moveup"><span className="text-emerald-300">h. </span>home( )</button></a>
                   

@@ -39,7 +39,7 @@
         "description":"Fetch rental sites from an API Search sites using 4 filters - Rent, BHK, Furnishing or City Built using react.js and tailwindCss",
         "img": "./data/img/shopkart.png",
         "tech": [ "HTML5", "CSS3","Bootstrap" ,"Javascript" ],
-        "url": "https://singhhimansh.github.io/Shopkart/",
+        "url": "https://theshopkart.vercel.app/",
         "git": "https://github.com/singhhimansh/Shopkart"
     }
 ]
