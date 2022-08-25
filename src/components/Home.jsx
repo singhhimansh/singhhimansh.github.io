@@ -5,7 +5,7 @@ import Intro from './Introduction';
 import Pallets from './Pallets';
 import Tabs from './Tabs';
 import logo from './images/HSc15.png';
-import resume from './Himanshu_Singh.pdf'
+import resume from './Himanshu-Singh-resume.pdf'
 import 'animate.css';
 import Navbar from './Navbar';
 
@@ -175,12 +175,12 @@ function Home() {
                 </div>
 
                 <div className="lg:w-3/5 mt-20 md:mt-28 flex flex-row flex-wrap gap-x-2 gap-y-3 md:gap-x-6 md:gap-y-8 ">
+                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='React.js'  src={require('./images/skills/react.png')} alt="" /> 
+                  <img className='w-12 shrink m-3 object-scale-down scale-[1.3]  grayscale hover:grayscale-0 hover:scale-[1.4] transition ' title='TailwindCSS'  src={require('./images/skills/tailwind.png')} alt="" /> 
+                  <img className='w-12 shrink m-3 object-scale-down scale-[1.3] grayscale hover:grayscale-0 hover:scale-[1.4] transition ' title='Bootstrap 5'  src={require('./images/skills/bootstrap.png')} alt="" /> 
+                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Javascript'  src={require('./images/skills/js.png')} alt="" />
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='HTML5' src={require("./images/skills/html.png")} alt="" />
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='CSS3' src={require('./images/skills/css.png')} alt="" />
-                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Javascript'  src={require('./images/skills/js.png')} alt="" />
-                  <img className='w-12 shrink m-3 object-scale-down scale-[1.3] grayscale hover:grayscale-0 hover:scale-[1.4] transition ' title='Bootstrap 5'  src={require('./images/skills/bootstrap.png')} alt="" /> 
-                  <img className='w-12 shrink m-3 object-scale-down scale-[1.3]  grayscale hover:grayscale-0 hover:scale-[1.4] transition ' title='TailwindCSS'  src={require('./images/skills/tailwind.png')} alt="" /> 
-                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='React.js'  src={require('./images/skills/react.png')} alt="" /> 
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Django'  src={require('./images/skills/django.png')} alt="" />
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='MySQL'  src={require('./images/skills/mysql.png')} alt="" />
                   <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Python 3'  src={require('./images/skills/python.png')} alt="" />
