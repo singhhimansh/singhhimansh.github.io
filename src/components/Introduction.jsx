@@ -31,7 +31,7 @@ function Introduction(){
 
 
                         
-                        <div className="text-defslate text-lg font-calibre  md:w-3/5 leading-7">A software developer proficient in web development skilled with technologies like React.Js, TailwindCSS for frontend and Django, Mysql  for backend.</div>
+                        <div className="text-defslate text-lg font-calibre  md:w-3/5 leading-7">A software developer proficient in web development skilled with technologies like React.Js, Next.js, Javascript, TailwindCSS, MySQL and many others.</div>
                     </div>
 
                     

@@ -39,7 +39,7 @@ function Tabs(){
                             </div>
                            
                             {/* <div className= "overflow-hidden rounded-md"> */}
-                            <img className={`absolute md:h-4/5 lg:h-full top-0 md:top-10 lg:top-0 left-0 z-0 h-[90%] rounded-lg object-fill saturate-0 hover:saturate-100 duration-200 self-center ${ project.id % 2 === 1 ? "md:col-start-1 md:col-span-8" : "md:col-start-5 md:col-span-8" }`} src={require(`${project.img}`)} alt="" />
+                            <img className={`absolute md:h-4/5 lg:h-full top-0 md:top-10 lg:top-0 left-0 z-0 h-[90%] rounded-lg object-fill saturate-0 hover:saturate-100 duration-200 self-center ${ project.id % 2 === 1 ? "md:col-start-1 md:col-span-8" : "md:col-start-5 md:col-span-8" }`} src={require(`./data/img/projects/${project.img}`)} alt="" />
                             {/* </div> */}
                             
                         </div>

@@ -1,4 +1,4 @@
-import logo from './images/HSc15.png';
+import logo from './data/img/logo/HSc15.png';
 import resume from './Himanshu-Singh-resume.pdf'
 import 'animate.css';
 

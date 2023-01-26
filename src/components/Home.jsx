@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import Intro from './Introduction';
 import Pallets from './Pallets';
 import Tabs from './Tabs';
-import logo from './images/HSc15.png';
+import logo from './data/img/logo/HSc15.png';
 import resume from './Himanshu-Singh-resume.pdf'
 import 'animate.css';
 import Navbar from './Navbar';
@@ -15,16 +15,11 @@ import { SiLinktree } from "react-icons/si";
 import {CgMenuRight} from 'react-icons/cg';
 import {IoClose} from 'react-icons/io5';
 
-
-
-
-
-
-
-
 function Home() {
 
   const [hambState, setHambState] = useState('close');
+
+  const skills= ["react","next","react-query","Typescript","mui","js","html","css","tailwind",'bootstrap',"github","mysql","python","photoshop",]
 
   const handleMenu = (e)=>{
     e.preventDefault();
@@ -34,10 +29,7 @@ function Home() {
     hambState === 'close' ? setHambState('open') : setHambState('close');
     
   }
-
-
-
-
+  
   return (
     <div id='home' className='Home relative'>
 
@@ -175,17 +167,11 @@ function Home() {
                 </div>
 
                 <div className="lg:w-3/5 mt-20 md:mt-28 flex flex-row flex-wrap gap-x-2 gap-y-3 md:gap-x-6 md:gap-y-8 ">
-                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='React.js'  src={require('./images/skills/react.png')} alt="" /> 
-                  <img className='w-12 shrink m-3 object-scale-down scale-[1.3]  grayscale hover:grayscale-0 hover:scale-[1.4] transition ' title='TailwindCSS'  src={require('./images/skills/tailwind.png')} alt="" /> 
-                  <img className='w-12 shrink m-3 object-scale-down scale-[1.3] grayscale hover:grayscale-0 hover:scale-[1.4] transition ' title='Bootstrap 5'  src={require('./images/skills/bootstrap.png')} alt="" /> 
-                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Javascript'  src={require('./images/skills/js.png')} alt="" />
-                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='HTML5' src={require("./images/skills/html.png")} alt="" />
-                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='CSS3' src={require('./images/skills/css.png')} alt="" />
-                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Django'  src={require('./images/skills/django.png')} alt="" />
-                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='MySQL'  src={require('./images/skills/mysql.png')} alt="" />
-                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Python 3'  src={require('./images/skills/python.png')} alt="" />
-                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Git'  src={require('./images/skills/github.png')} alt="" />
-                  <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title='Photoshop'  src={require('./images/skills/photoshop.png')} alt="" /> 
+                  {
+                    skills.map((skill)=>{
+                      return <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title={skill}  src={require(`./data/img/skills/${skill}.png`)} alt="" />
+                    })
+                  }
                 </div>
           </section>
 
