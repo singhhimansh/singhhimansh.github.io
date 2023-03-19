@@ -1,5 +1,5 @@
 import logo from './data/img/logo/HSc15.png';
-import resume from './Himanshu-Singh-resume.pdf'
+import resume from './Himanshu-Singh-resume.pdf';
 import 'animate.css';
 
 import {CgMenuRight} from 'react-icons/cg';

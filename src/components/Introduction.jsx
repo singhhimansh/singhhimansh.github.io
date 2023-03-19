@@ -1,6 +1,7 @@
 import './profile/border-anim.css';
 import Dp from './profile/him.jpg';
 import 'animate.css';
+import Tilt from 'react-parallax-tilt';
 
 import Typewriter from 'typewriter-effect';
 // import Typewriter from 'typewriter-effect/dist/core';
@@ -35,7 +36,6 @@ function Introduction(){
                     </div>
 
                     
-
                     <div className=" profile self-center lg:self-end ">
                         <div className="dp content-center">
                             <img src={Dp}  alt="Profile picture" sizes="" srcSet=""/>

@@ -2,6 +2,7 @@
 import { GoMarkGithub,GoLinkExternal } from 'react-icons/go';
 import projects from './data/projects.json';
 import 'animate.css';
+import Tilt from 'react-parallax-tilt';
 
 function Tabs(){
     return (
@@ -15,6 +16,10 @@ function Tabs(){
                 { projects.map((project)=>{
 
                     return(
+                        <Tilt
+                        tiltMaxAngleY={8}
+                        tiltMaxAngleX={8}
+                        >
                         <a href={project.url} target='_blank' title={project.title}  >
                         <div key={project.id} className={`group items-center my-24 md:my-32 lg:mx-10 h-96 relative md:grid md:grid-cols-12 gap-3 select-none ${ project.id % 2 === 1 ? "text-right" : "text-left" } `}>
                          
@@ -44,6 +49,7 @@ function Tabs(){
                             
                         </div>
                         </a>
+                        </Tilt>
                     );
                 })
                 }

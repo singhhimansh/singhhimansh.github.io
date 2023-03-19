@@ -8,6 +8,7 @@ import logo from './data/img/logo/HSc15.png';
 import resume from './Himanshu-Singh-resume.pdf'
 import 'animate.css';
 import Navbar from './Navbar';
+import Tilt from 'react-parallax-tilt';
 
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
@@ -166,13 +167,20 @@ function Home() {
                   <hr className="whitespace-nowrap w-1/6 h-px bg-lightestslate opacity-50" />
                 </div>
 
+              {/* <Tilt tiltEnable='false' > */}
+              
                 <div className="lg:w-3/5 mt-20 md:mt-28 flex flex-row flex-wrap gap-x-2 gap-y-3 md:gap-x-6 md:gap-y-8 ">
                   {
                     skills.map((skill)=>{
-                      return <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title={skill}  src={require(`./data/img/skills/${skill}.png`)} alt="" />
+                      return (
+                        <Tilt scale='1.4' tiltMaxAngleX={50} tiltMaxAngleY={50} transitionSpeed={2500}>
+                      <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title={skill}  src={require(`./data/img/skills/${skill}.png`)} alt="" />
+                      </Tilt>
+                      )
                     })
                   }
                 </div>
+                {/* </Tilt> */}
           </section>
 
 
