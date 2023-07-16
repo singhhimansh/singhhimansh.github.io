@@ -1,11 +1,12 @@
 import logo from './data/img/logo/HSc15.png';
-import resume from './Himanshu-Singh-resume.pdf';
+// import resume from './Himanshu-Singh-resume.pdf';
 import 'animate.css';
 
 import {CgMenuRight} from 'react-icons/cg';
 import {IoClose} from 'react-icons/io5';
 
 import React, { useState } from 'react'
+import { resume } from './utils';
 
 
 
@@ -50,7 +51,7 @@ function Navbar() {
                   <a href="#contact" className="" target="_parent" rel="noopener noreferrer"><button className="p-2 hover:text-emerald-300 moveup"><span className="text-emerald-300">h. </span>
                     contact( )</button></a>
                 
-                  <a href={resume} className="" target="_blank" rel="noopener noreferrer"><button className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 py-2  hover:bg-emerald-100/5 rounded border border-emerald-300/90"><span className="text-emerald-300 ">h. </span> resume( )</button></a>
+                  <a href={resume()} className="" target="_blank" rel="noopener noreferrer"><button className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 py-2  hover:bg-emerald-100/5 rounded border border-emerald-300/90"><span className="text-emerald-300 ">h. </span> resume( )</button></a>
               
               </div>
 
@@ -80,7 +81,7 @@ function Navbar() {
                     <a href="#contact" className="" target="_parent" rel="noopener noreferrer"><button className="p-2 hover:text-emerald-300 moveup"><span className="text-emerald-300">h. </span>
                       contact( )</button></a>
                   
-                    <a href={resume} className="" target="_blank" rel="noopener noreferrer"><button className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 py-2  hover:bg-emerald-100/5 rounded border border-emerald-300/90"><span className="text-emerald-300 ">h. </span> resume( )</button></a>
+                    <a href={resume()} className="" target="_blank" rel="noopener noreferrer"><button className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 py-2  hover:bg-emerald-100/5 rounded border border-emerald-300/90"><span className="text-emerald-300 ">h. </span> resume( )</button></a>
                 
                 
                 </div>

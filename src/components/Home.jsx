@@ -5,7 +5,7 @@ import Intro from './Introduction';
 import Pallets from './Pallets';
 import Tabs from './Tabs';
 import logo from './data/img/logo/HSc15.png';
-import resume from './Himanshu-Singh-resume.pdf'
+// import resume from './Himanshu-Singh-resume.pdf'
 import 'animate.css';
 import Navbar from './Navbar';
 import Tilt from 'react-parallax-tilt';
@@ -15,6 +15,7 @@ import { GrInstagram } from "react-icons/gr";
 import { SiLinktree } from "react-icons/si";
 import {CgMenuRight} from 'react-icons/cg';
 import {IoClose} from 'react-icons/io5';
+import { resume } from './utils';
 
 function Home() {
 
@@ -60,7 +61,7 @@ function Home() {
                   <a href="#contact" className="" target="_parent" rel="noopener noreferrer"><button className="p-2 hover:text-emerald-300 moveup"><span className="text-emerald-300">h. </span>
                     contact( )</button></a>
                 
-                  <a href={resume} className="" target="_blank" rel="noopener noreferrer"><button className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 pb-1 pt-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90"><span className="text-emerald-300 ">h. </span> resume( )</button></a>
+                  <a href={resume()} className="" target="_blank" rel="noopener noreferrer"><button className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 pb-1 pt-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90"><span className="text-emerald-300 ">h. </span> resume( )</button></a>
               
               </div>
 
@@ -90,7 +91,7 @@ function Home() {
                     <a href="#contact" className="" target="_parent" rel="noopener noreferrer"><button onClick={()=> setHambState('close')} className="p-2 hover:text-emerald-300 moveup"><span className="text-emerald-300">h. </span>
                       contact( )</button></a>
                   
-                    <a href={resume} className="" target="_blank" rel="noopener noreferrer"><button onClick={()=> setHambState('close')} className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 py-2  hover:bg-emerald-100/5 rounded border border-emerald-300/90"><span className="text-emerald-300 ">h. </span> resume( )</button></a>
+                    <a href={resume()} className="" target="_blank" rel="noopener noreferrer"><button onClick={()=> setHambState('close')} className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 py-2  hover:bg-emerald-100/5 rounded border border-emerald-300/90"><span className="text-emerald-300 ">h. </span> resume( )</button></a>
                 
                 
                 </div>
