@@ -47,7 +47,7 @@
 .dp::before{
     content: "";
     position: absolute;
-    /* background: linear-gradient(#36e7f4,#f9d90a); */
+    /* background: linear-gradient(#36e7f4,#ebd43c); */
     /* background-color: #36f1f4; */
     background-color: #3c8b9d;
     width: 95%;

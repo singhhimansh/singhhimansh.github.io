@@ -5,15 +5,17 @@ import Intro from './Introduction';
 import Pallets from './Pallets';
 import Tabs from './Tabs';
 import logo from './data/img/logo/HSc15.png';
-import resume from './Himanshu-Singh-resume.pdf'
+// import resume from './Himanshu-Singh-resume.pdf'
 import 'animate.css';
 import Navbar from './Navbar';
+import Tilt from 'react-parallax-tilt';
 
 import { FaGithub, FaLinkedin, FaFacebook } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 import { SiLinktree } from "react-icons/si";
 import {CgMenuRight} from 'react-icons/cg';
 import {IoClose} from 'react-icons/io5';
+import { resume } from './utils';
 
 function Home() {
 
@@ -59,7 +61,7 @@ function Home() {
                   <a href="#contact" className="" target="_parent" rel="noopener noreferrer"><button className="p-2 hover:text-emerald-300 moveup"><span className="text-emerald-300">h. </span>
                     contact( )</button></a>
                 
-                  <a href={resume} className="" target="_blank" rel="noopener noreferrer"><button className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 pb-1 pt-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90"><span className="text-emerald-300 ">h. </span> resume( )</button></a>
+                  <a href={resume()} className="" target="_blank" rel="noopener noreferrer"><button className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 pb-1 pt-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90"><span className="text-emerald-300 ">h. </span> resume( )</button></a>
               
               </div>
 
@@ -89,7 +91,7 @@ function Home() {
                     <a href="#contact" className="" target="_parent" rel="noopener noreferrer"><button onClick={()=> setHambState('close')} className="p-2 hover:text-emerald-300 moveup"><span className="text-emerald-300">h. </span>
                       contact( )</button></a>
                   
-                    <a href={resume} className="" target="_blank" rel="noopener noreferrer"><button onClick={()=> setHambState('close')} className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 py-2  hover:bg-emerald-100/5 rounded border border-emerald-300/90"><span className="text-emerald-300 ">h. </span> resume( )</button></a>
+                    <a href={resume()} className="" target="_blank" rel="noopener noreferrer"><button onClick={()=> setHambState('close')} className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 py-2  hover:bg-emerald-100/5 rounded border border-emerald-300/90"><span className="text-emerald-300 ">h. </span> resume( )</button></a>
                 
                 
                 </div>
@@ -166,13 +168,20 @@ function Home() {
                   <hr className="whitespace-nowrap w-1/6 h-px bg-lightestslate opacity-50" />
                 </div>
 
+              {/* <Tilt tiltEnable='false' > */}
+              
                 <div className="lg:w-3/5 mt-20 md:mt-28 flex flex-row flex-wrap gap-x-2 gap-y-3 md:gap-x-6 md:gap-y-8 ">
                   {
                     skills.map((skill)=>{
-                      return <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title={skill}  src={require(`./data/img/skills/${skill}.png`)} alt="" />
+                      return (
+                        <Tilt scale='1.4' tiltMaxAngleX={50} tiltMaxAngleY={50} transitionSpeed={2500}>
+                      <img className='w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition ' title={skill}  src={require(`./data/img/skills/${skill}.png`)} alt="" />
+                      </Tilt>
+                      )
                     })
                   }
                 </div>
+                {/* </Tilt> */}
           </section>
 
 
