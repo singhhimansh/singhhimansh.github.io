@@ -1,4 +1,4 @@
-# <img src="./src/components/images/HS C9.png" alt="HS logo" width="32px"> Himanshu Singh | Portfolio Site
+# <img src="./src/components/data/img/logo/HSc15.png" alt="HS logo" width="32px"> Himanshu Singh | Portfolio Site
 
 ***Hi Wonderer !***  
 This is my portfolio site designed and developed by me after rigorous research, thinking and a lot of striking keys on keyboard.  
