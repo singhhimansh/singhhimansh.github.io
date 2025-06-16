@@ -1,4 +1,6 @@
-import { GoMarkGithub, GoLinkExternal } from "react-icons/go";
+import {  GoLinkExternal } from "react-icons/go";
+import { TbBrandGithub } from "react-icons/tb";
+
 import React, { useState } from "react";
 import "animate.css";
 import experience from "./data/experience.js";
@@ -91,7 +93,7 @@ export default function Tabs() {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <GoMarkGithub className="inline hover:fill-emerald-300  w-5 h-5   " />
+                      <TbBrandGithub className="inline hover:fill-emerald-300  w-5 h-5   " />
                     </a>
                   )}
                   {work.website && (

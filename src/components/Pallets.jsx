@@ -1,5 +1,7 @@
 
-import { GoMarkGithub,GoLinkExternal } from 'react-icons/go';
+import { GoLinkExternal } from 'react-icons/go';
+import { TbBrandGithub } from "react-icons/tb";
+
 import projects from './data/projects.json';
 import 'animate.css';
 import Tilt from 'react-parallax-tilt';
@@ -37,7 +39,7 @@ function Tabs(){
                                     }
                                 </div>
                                 <div className='m-2'>
-                                <a href={project.git} title={`${project.title} git repository`} target="_blank" rel="noopener noreferrer"><GoMarkGithub className='inline mr-4 hover:fill-emerald-300 duration-200 w-5 h-5   '/></a>
+                                <a href={project.git} title={`${project.title} git repository`} target="_blank" rel="noopener noreferrer"><TbBrandGithub className='inline mr-4 hover:fill-emerald-300 duration-200 w-5 h-5   '/></a>
                                 <a href={project.url} title={`${project.title} website`}  target="_blank" rel="noopener noreferrer"><GoLinkExternal className='inline hover:fill-emerald-300 duration-200 w-5 h-5  '/></a>
                                 </div>
 
