@@ -2,11 +2,30 @@ import "./profile/border-anim.css";
 import Dp from "./profile/him.jpg";
 import "animate.css";
 import Tilt from "react-parallax-tilt";
+import experience from "./data/experience.js";
 
 import Typewriter from "typewriter-effect";
 // import Typewriter from 'typewriter-effect/dist/core';
 
 function Introduction() {
+
+  const totalExperience = () => {
+    const workData = experience;
+    const totalExperienceInDays = workData.reduce((total, work) => {
+      const startDate = new Date(work.start);
+      const endDate = work.end ? new Date(work.end) : new Date();
+      const diff = endDate.getTime() - startDate.getTime();
+      return total + Math.ceil(diff / (1000 * 60 * 60 * 24));
+    }, 0);
+    const totalExperienceInYears = totalExperienceInDays / 365.25;
+    if (totalExperienceInYears % 1 >= 0.7) {
+      return `around ${Math.ceil(totalExperienceInYears)}`;
+    } else if (totalExperienceInYears % 1 <= 0.3) {
+      return `over ${Math.floor(totalExperienceInYears)}`;
+    } else {
+      return `around ${Math.floor(totalExperienceInYears)+ 0.5}`;
+    }
+  }
   return (
     <section
       id="intro"
@@ -40,9 +59,15 @@ function Introduction() {
           </div>
 
           <div className="text-defslate text-lg font-calibre  md:w-3/5 leading-7">
-            A software developer proficient in web development skilled with
-            technologies like React.Js, Next.js, Javascript, TailwindCSS, MySQL
-            and many others.
+            A software developer with {" "}
+            <span className="font-bold text-emerald-300">
+              {totalExperience()} years 
+            </span>
+            {" "}
+            of experience  
+            in development
+            skilled with technologies like React.Js, Next.js, Javascript,
+            TailwindCSS, MySQL and many others.
           </div>
         </div>
 
