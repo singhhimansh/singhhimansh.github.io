@@ -30,7 +30,7 @@
     border-radius: 50%;
     object-fit: cover;
     /* object-position:-65px 0px; */
-    filter: brightness(0.6) contrast(1.06);
+    filter: brightness(0.9) contrast(1.01);
 
 }
 

@@ -18,10 +18,9 @@ function Tabs() {
       <div className="">
         {projects?.filter((project) => !project.hide)?.sort((a, b) => a.id - b.id)?.map((project) => {
           return (
-            <Tilt tiltMaxAngleY={8} tiltMaxAngleX={8}>
+            <Tilt tiltMaxAngleY={8} tiltMaxAngleX={8} key={project.title}>
               <a href={project.url} target="_blank" rel="noreferrer" title={project.title}>
                 <div
-                  key={project.id}
                   className={`group items-center my-24 md:my-32 lg:mx-10 h-96 relative md:grid md:grid-cols-12 gap-3 select-none ${project.id % 2 === 1 ? "text-right" : "text-left"} `}
                 >
                   <div
