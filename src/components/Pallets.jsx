@@ -19,7 +19,7 @@ function Tabs() {
         {projects?.filter((project) => !project.hide)?.sort((a, b) => a.id - b.id)?.map((project) => {
           return (
             <Tilt tiltMaxAngleY={8} tiltMaxAngleX={8}>
-              <a href={project.url} target="_blank" title={project.title}>
+              <a href={project.url} target="_blank" rel="noreferrer" title={project.title}>
                 <div
                   key={project.id}
                   className={`group items-center my-24 md:my-32 lg:mx-10 h-96 relative md:grid md:grid-cols-12 gap-3 select-none ${project.id % 2 === 1 ? "text-right" : "text-left"} `}
@@ -47,7 +47,7 @@ function Tabs() {
                       <a
                         href={project.git}
                         title={`${project.title} git repository`}
-                        target="_blank"
+                        target="_blank" 
                         rel="noopener noreferrer"
                       >
                         <TbBrandGithub className="inline mr-4 hover:fill-emerald-300 duration-200 w-5 h-5   " />
@@ -55,7 +55,7 @@ function Tabs() {
                       <a
                         href={project.url}
                         title={`${project.title} website`}
-                        target="_blank"
+                        target="_blank" 
                         rel="noopener noreferrer"
                       >
                         <GoLinkExternal className="inline hover:fill-emerald-300 duration-200 w-5 h-5  " />

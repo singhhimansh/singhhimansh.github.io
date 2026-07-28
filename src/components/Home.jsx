@@ -138,7 +138,7 @@ function Home() {
               <a
                 href={resume()}
                 className=""
-                target="_blank"
+                target="_blank" 
                 rel="noopener noreferrer"
               >
                 <button className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 pb-1 pt-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90">
@@ -245,7 +245,7 @@ function Home() {
                 <a
                   href={resume()}
                   className=""
-                  target="_blank"
+                  target="_blank" 
                   rel="noopener noreferrer"
                 >
                   <button
@@ -268,7 +268,7 @@ function Home() {
             <a
               title="Github"
               href="https://github.com/singhhimansh/"
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className="hover:text-emerald-300"
             >
               <FaGithub className="w-5 h-5 fill-lightslate hover:fill-emerald-300" />
@@ -279,7 +279,7 @@ function Home() {
             <a
               title="Linkedin"
               href="https://www.linkedin.com/in/singhhimansh/"
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className="hover:fill-emerald-300"
             >
               <FaLinkedin className="w-5 h-5 fill-lightslate hover:fill-emerald-300" />{" "}
@@ -290,7 +290,7 @@ function Home() {
             <a
               title="Instagram"
               href="https://www.instagram.com/himanshhh_/"
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className=""
             >
               <GrInstagram className="w-5 h-5 fill-lightslate hover:fill-emerald-300" />
@@ -301,7 +301,7 @@ function Home() {
             <a
               title="Facebook"
               href="https://www.facebook.com/him.signum/"
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className=""
             >
               <FaFacebook className="w-5 h-5 fill-lightslate hover:fill-emerald-300" />
@@ -312,7 +312,7 @@ function Home() {
             <a
               title="linktree"
               href="https://linktr.ee/himanshhh_"
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className=""
             >
               <SiLinktree className="w-5 h-5 fill-lightslate hover:fill-emerald-300" />
@@ -333,7 +333,7 @@ function Home() {
               className=""
               title="s.himanshusingh56@gmail.com"
               href="mailto:s.himanshusingh56@gmail.com"
-              target="_blank"
+              target="_blank" 
               rel="noopener noreferrer"
             >
               {/* <SiGmail className='w-5 h-5 fill-slate-500 hover:fill-emerald-300'/> */}
@@ -432,7 +432,7 @@ function Home() {
               </div>
               <a
                 href={`https://wa.me/9084618246?text=Hi%20Himanshu,%20Nice%20to%20meet%20you.`}
-                target="_blank"
+                target="_blank" 
                 rel="noopener noreferrer"
                 className="flex grow w-full"
               >
@@ -454,7 +454,7 @@ function Home() {
                 <li name="github" className="py-3 moveup">
                   <a
                     href="https://github.com/singhhimansh/"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     className="hover:text-emerald-300"
                   >
                     <FaGithub className="w-5 h-5 fill-slate-500 hover:fill-emerald-300" />
@@ -464,7 +464,7 @@ function Home() {
                 <li name="linkedin" className="py-3 moveup">
                   <a
                     href="https://www.linkedin.com/in/singhhimansh/"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     className="hover:fill-emerald-300"
                   >
                     <FaLinkedin className="w-5 h-5 fill-slate-500 hover:fill-emerald-300" />{" "}
@@ -474,7 +474,7 @@ function Home() {
                 <li name="instagram" className="py-3 moveup">
                   <a
                     href="https://www.instagram.com/himanshhh_/"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     className=""
                   >
                     <GrInstagram className="w-5 h-5 fill-slate-500 hover:fill-emerald-300" />
@@ -484,7 +484,7 @@ function Home() {
                 <li name="facebook" className="py-3 moveup">
                   <a
                     href="https://www.facebook.com/him.signum/"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     className=""
                   >
                     <FaFacebook className="w-5 h-5 fill-slate-500 hover:fill-emerald-300" />
@@ -494,7 +494,7 @@ function Home() {
                 <li name="linktree" className="py-3 moveup">
                   <a
                     href="https://linktr.ee/himanshhh_"
-                    target="_blank"
+                    target="_blank" rel="noreferrer"
                     className=""
                   >
                     <SiLinktree className="w-5 h-5 fill-slate-500 hover:fill-emerald-300" />

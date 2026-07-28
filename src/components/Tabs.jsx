@@ -136,7 +136,7 @@ export default function Tabs() {
                   {work.git && (
                     <a
                       href={work.git}
-                      target="_blank"
+                      target="_blank" 
                       rel="noopener noreferrer"
                     >
                       <TbBrandGithub className="inline hover:fill-emerald-300  w-5 h-5   " />
@@ -145,7 +145,7 @@ export default function Tabs() {
                   {work.website && (
                     <a
                       href={work.website}
-                      target="_blank"
+                      target="_blank" 
                       rel="noopener noreferrer"
                     >
                       <GoLinkExternal className="inline hover:fill-emerald-300  w-5 h-5  " />
@@ -176,7 +176,7 @@ export default function Tabs() {
             <button className="m-5 px-4 py-2 text-sm border border-emerald-300 rounded-md hover:bg-emerald-100/10 hover:border-emerald-500 hover:text-lightslate">
               <a
                 href="mailto:s.himanshusingh56@gmail.com"
-                target="_blank"
+                target="_blank" 
                 rel="noopener noreferrer"
               >
                 Say Hello
