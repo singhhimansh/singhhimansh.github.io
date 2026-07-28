@@ -90,7 +90,7 @@ function Navbar() {
             <a
               href={resume()}
               className=""
-              target="_blank" 
+              target="_blank"
               rel="noopener noreferrer"
             >
               <button className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 py-2  hover:bg-emerald-100/5 rounded border border-emerald-300/90">
@@ -173,7 +173,7 @@ function Navbar() {
               <a
                 href={resume()}
                 className=""
-                target="_blank" 
+                target="_blank"
                 rel="noopener noreferrer"
               >
                 <button className="mx-2 text-center hover:text-emerald-300 moveup  duration-300 px-4 py-2  hover:bg-emerald-100/5 rounded border border-emerald-300/90">
