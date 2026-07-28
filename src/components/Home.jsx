@@ -43,7 +43,7 @@ function Home() {
     "docker",
     "kubernetes",
     "jest",
-"aws",
+    "aws",
 
     "mysql",
     "python",

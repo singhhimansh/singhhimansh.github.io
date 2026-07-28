@@ -4,7 +4,6 @@ import { MdLocationOn } from "react-icons/md";
 import { GoClock } from "react-icons/go";
 import { MdCalendarMonth } from "react-icons/md";
 
-
 import React, { useState } from "react";
 import "animate.css";
 import experience from "./data/experience.js";
@@ -18,7 +17,7 @@ export default function Tabs() {
     const diff = endDate.getTime() - startDate.getTime();
     const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25));
     const months = Math.floor(
-      (diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30)
+      (diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30),
     );
     return `${years > 0 ? `${years} years` : ""} ${
       months > 0 ? `${months} months` : ""
@@ -171,7 +170,8 @@ export default function Tabs() {
             </h1>
             <p className="text-sm">
               This section will show a glimpse of projects i would be doing at
-              yours company. Wanna discuss the project? Tap on the below button.{" "}
+              yours company. Wanna discuss the project? Tap on the below
+              button.{" "}
             </p>
             <button className="m-5 px-4 py-2 text-sm border border-emerald-300 rounded-md hover:bg-emerald-100/10 hover:border-emerald-500 hover:text-lightslate">
               <a

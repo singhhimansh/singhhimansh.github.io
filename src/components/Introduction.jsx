@@ -8,7 +8,6 @@ import Typewriter from "typewriter-effect";
 // import Typewriter from 'typewriter-effect/dist/core';
 
 function Introduction() {
-
   const totalExperience = () => {
     const workData = experience;
     const totalExperienceInDays = workData.reduce((total, work) => {
@@ -23,9 +22,9 @@ function Introduction() {
     } else if (totalExperienceInYears % 1 <= 0.3) {
       return `over ${Math.floor(totalExperienceInYears)}`;
     } else {
-      return `around ${Math.floor(totalExperienceInYears)+ 0.5}`;
+      return `around ${Math.floor(totalExperienceInYears) + 0.5}`;
     }
-  }
+  };
   return (
     <section
       id="intro"
@@ -34,7 +33,8 @@ function Introduction() {
       <div className=" h-2/3 my-36 -mt-12  md:-mt-4  mb-48 border-0 border-green-400 self-center items-center  flex flex-col lg:flex-row gap-36 lg:gap-0 ">
         <div className="relative border-0 border-yellow-400">
           <div className="my-5 text-emerald-300 tracking-wider italic ">
-            Hi, Wonderer ! <span className="md:invisible">My name is </span>{" "}
+            Hi, Wonderer !{" "}
+            <span className="md:invisible">My name is </span>{" "}
           </div>
           <div className=" relative text-lightestslate  text-5xl md:text-[70px] font-calibre font-bold ">
             <span className="absolute top-8 -left-8 text-base text-emerald-300/80 tracking-wider invisible md:visible ">
@@ -59,15 +59,12 @@ function Introduction() {
           </div>
 
           <div className="text-defslate text-lg font-calibre  md:w-3/5 leading-7">
-            A software developer with {" "}
+            A software developer with{" "}
             <span className="font-bold text-emerald-300">
-              {totalExperience()} years 
-            </span>
-            {" "}
-            of experience  
-            in development
-            skilled with technologies like React.Js, Next.js, Javascript,
-            TailwindCSS, MySQL and many others.
+              {totalExperience()} years
+            </span>{" "}
+            of experience in development skilled with technologies like
+            React.Js, Next.js, Javascript, TailwindCSS, MySQL and many others.
           </div>
         </div>
 

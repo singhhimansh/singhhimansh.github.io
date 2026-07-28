@@ -12,10 +12,12 @@ const workData = [
     location: "New Delhi",
     git: "",
     discription: [
-      `Building loan disbursement flow for Flipkart two-wheeler loans using App routing of Next.js 15, TailwindCSS, and ShadCN.`,
-      `Integrated ZipNach for digital mandates and auto-debit authorization.`,
-      `Implemented Hyperverge e-KYC for real-time customer verification.`,
-      `Utilized Redux Toolkit Query for efficient state and API data handling.`,
+      `Developed a digital loan journey for two-wheeler loans (TWL) purchased from Flipkart, using App routing of Next.js 15, TailwindCSS, Redux Toolkit Query, and ShadCN.`,
+      `Integrated ZipNach for digital mandates, Legality for e-signs, and internationalization (i18n) to support multi-languages using next-intl, improving accessibility.`,
+      `Integrated Amplitude SDK for advanced digital analytics, including event tracking, session recordings, heatmaps, and more.`,
+      `Developed a Business Rules Engine (BRE) portal featuring role-based access, complex decision making across loan lifecycle stages, and monthly performance dashboards, significantly reducing manual business operations.`,
+      `Developed a Repeat Loan Journey for returning customers with strong repayment history, improving customer retention.`,
+      `Delivered accessible, responsive interfaces supporting multiple screen sizes and compatibility across browsers.`,
     ],
   },
   {
