@@ -26,11 +26,9 @@ export const Navbar: React.FC = () => {
   }
 
   const NavButton = ({ label, href, onClick }: { label: string; href: string; onClick?: () => void }) => (
-    <NavLink href={href} onClick={onClick}>
-      <button className="p-2 hover:text-emerald-300 moveup">
-        <span className="text-emerald-300">h. </span>
-        {label}()
-      </button>
+    <NavLink href={href} onClick={onClick} className="p-2 hover:text-emerald-300 moveup cursor-pointer">
+      <span className="text-emerald-300">h. </span>
+      {label}()
     </NavLink>
   )
 
@@ -48,11 +46,9 @@ export const Navbar: React.FC = () => {
             {navItems.map((item) => (
               <NavButton key={item.label} label={item.label} href={item.href} />
             ))}
-            <NavLink href={resume()} target="_blank">
-              <button className="mx-2 text-center hover:text-emerald-300 moveup duration-300 px-4 py-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90">
-                <span className="text-emerald-300">h. </span>
-                resume()
-              </button>
+            <NavLink href={resume()} target="_blank" className="mx-2 text-center hover:text-emerald-300 moveup duration-300 px-4 py-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90 cursor-pointer">
+              <span className="text-emerald-300">h. </span>
+              resume()
             </NavLink>
           </div>
 
@@ -80,11 +76,9 @@ export const Navbar: React.FC = () => {
               {navItems.map((item) => (
                 <NavButton key={item.label} label={item.label} href={item.href} onClick={closeMenu} />
               ))}
-              <NavLink href={resume()} target="_blank" onClick={closeMenu}>
-                <button className="mx-2 text-center hover:text-emerald-300 moveup duration-300 px-4 py-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90">
-                  <span className="text-emerald-300">h. </span>
-                  resume()
-                </button>
+              <NavLink href={resume()} target="_blank" onClick={closeMenu} className="mx-2 text-center hover:text-emerald-300 moveup duration-300 px-4 py-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90 cursor-pointer">
+                <span className="text-emerald-300">h. </span>
+                resume()
               </NavLink>
             </div>
           </div>

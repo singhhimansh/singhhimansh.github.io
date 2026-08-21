@@ -149,15 +149,14 @@ export const WorkExperience: React.FC = () => {
               yours company. Wanna discuss the project? Tap on the below
               button.
             </p>
-            <button className="m-5 px-4 py-2 text-sm border border-emerald-300 rounded-md hover:bg-emerald-100/10 hover:border-emerald-500 hover:text-lightslate">
-              <a
-                href="mailto:s.himanshusingh56@gmail.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Say Hello
-              </a>
-            </button>
+            <a
+              href="mailto:s.himanshusingh56@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="m-5 inline-block px-4 py-2 text-sm border border-emerald-300 rounded-md hover:bg-emerald-100/10 hover:border-emerald-500 hover:text-lightslate cursor-pointer"
+            >
+              Say Hello
+            </a>
           </div>
         </div>
       </div>

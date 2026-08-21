@@ -31,26 +31,26 @@ export const Contact: React.FC = () => {
 
       <div className="flex flex-col gap-5 w-96 text-nowrap">
         <div className="flex gap-4 grow w-full">
-          <a href={`mailto:${contactInfo.email}`} className="w-full">
-            <Button className="w-full">
-              <HiOutlineMailOpen className="inline-block pb-1" /> Drop a mail
-            </Button>
+          <a
+            href={`mailto:${contactInfo.email}`}
+            className="w-full px-4 py-2 text-slate-400 text-center border border-emerald-400/90 rounded-md hover:bg-emerald-100/5 hover:text-lightestslate transition-all duration-300 cursor-pointer"
+          >
+            <HiOutlineMailOpen className="inline-block pb-1" /> Drop a mail
           </a>
-          <a href={`tel:${contactInfo.phone}`} className="w-full">
-            <Button className="w-full">
-              <HiOutlinePhone className="inline-block pb-1" /> Call Me
-            </Button>
+          <a
+            href={`tel:${contactInfo.phone}`}
+            className="w-full px-4 py-2 text-slate-400 text-center border border-emerald-400/90 rounded-md hover:bg-emerald-100/5 hover:text-lightestslate transition-all duration-300 cursor-pointer"
+          >
+            <HiOutlinePhone className="inline-block pb-1" /> Call Me
           </a>
         </div>
         <a
           href={`https://wa.me/${contactInfo.whatsapp}?text=Hi%20Himanshu,%20Nice%20to%20meet%20you.`}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex grow w-full"
+          className="flex grow w-full px-4 py-2 text-slate-400 text-center border border-emerald-400/90 rounded-md hover:bg-emerald-100/5 hover:text-lightestslate transition-all duration-300 cursor-pointer"
         >
-          <Button className="w-full">
-            <SiWhatsapp className="inline-block pb-1" /> Let's talk on WhatsApp
-          </Button>
+          <SiWhatsapp className="inline-block pb-1" /> Let's talk on WhatsApp
         </a>
       </div>
     </Section>
