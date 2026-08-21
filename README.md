@@ -1,10 +1,15 @@
-# <img src="./src/components/images/HS C9.png" alt="HS logo" width="32px"> Himanshu Singh | Portfolio Site
+# Himanshu Singh | Portfolio Site
 
-***Hi Wonderer !***  
+***Hi Wonderer!***  
 This is my portfolio site designed and developed by me after rigorous research, thinking and a lot of striking keys on keyboard.  
-Do go thorough my site to experince awesome ui/ux design. Also get to know about me concomitantly.    
+Do go through my site to experience awesome ui/ux design. Also get to know about me concomitantly.
 
 ## Tech Stack
- HTML5/CSS3, React.Js, TailwindCss & AnimateCss. 
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **TailwindCSS** - Utility-first CSS framework
+- **Animate.css** - CSS animation library
+- **React Icons** - Icon library
+
 
 #### _Developed by Himanshu Singh_

@@ -5,13 +5,14 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 
 
 module.exports = {
-  content: ["./src/**/*.{html,jsx}"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
 
       fontFamily: {
-
-        // 'sans': ['calibre', ...defaultTheme.fontFamily.sans],
 
         calibre: "'calibre', sans",
 
@@ -35,17 +36,5 @@ module.exports = {
 
     },
   },
-
-
-  variants: {
-
-    extend: {
-
-      backgroundColor: ['active'],
-
-    },
-
-  },
-
   plugins: [],
 }
