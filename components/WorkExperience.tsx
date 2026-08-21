@@ -34,7 +34,7 @@ export const WorkExperience: React.FC = () => {
       </div>
 
       {/* Tabbed layout (vertical tabs on left, content on right) */}
-      <div className="md:w-3/4 lg:w-4/5 min-h-[420px] md:min-h-[385px] lg:min-h-[320px] my-20 md:m-16 flex gap-2 md:gap-3 text-slate-400 bg-emerald-100/5 rounded-md">
+      <div className="hidden md:block md:w-3/4 lg:w-4/5 min-h-[420px] md:min-h-[385px] lg:min-h-[320px] my-20 md:m-16 flex gap-2 md:gap-3 text-slate-400 bg-emerald-100/5 rounded-md">
         {/* Tab buttons */}
         <div className="flex flex-col text-xs md:text-sm">
           {workData.map((work) => (

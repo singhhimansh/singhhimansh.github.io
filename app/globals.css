@@ -35,6 +35,25 @@ body {
   border-radius: 5px;
 }
 
+/* Thin scrollbar for horizontal scrolling elements */
+.scrollbar-hide::-webkit-scrollbar {
+  height: 4px;
+}
+
+.scrollbar-hide::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 50px;
+}
+
+.scrollbar-hide::-webkit-scrollbar-thumb {
+  background: #48566b;
+  border-radius: 5px;
+}
+
+.scrollbar-hide::-webkit-scrollbar-thumb:hover {
+  background: #48566b;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
