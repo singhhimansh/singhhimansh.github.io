@@ -33,6 +33,7 @@ export const WorkExperience: React.FC = () => {
         <hr className="whitespace-nowrap w-1/6 h-1px bg-slate-400 opacity-60" />
       </div>
 
+      {/* Tabbed layout (vertical tabs on left, content on right) */}
       <div className="md:w-3/4 lg:w-4/5 min-h-[420px] md:min-h-[385px] lg:min-h-[320px] my-20 md:m-16 flex gap-2 md:gap-3 text-slate-400 bg-emerald-100/5 rounded-md">
         {/* Tab buttons */}
         <div className="flex flex-col text-xs md:text-sm">
@@ -149,11 +150,136 @@ export const WorkExperience: React.FC = () => {
               yours company. Wanna discuss the project? Tap on the below
               button.
             </p>
+            <button className="m-5 px-4 py-2 text-sm border border-emerald-300 rounded-md hover:bg-emerald-100/10 hover:border-emerald-500 hover:text-lightslate">
+              <a
+                href="mailto:s.himanshusingh56@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Say Hello
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile: Horizontal tabs with content below */}
+      <div className="md:hidden w-full my-20">
+        {/* Horizontal tabs */}
+        <div className="flex overflow-x-auto gap-2 mb-6 pb-2 scrollbar-hide">
+          {workData.map((work) => (
+            <button
+              key={work.id}
+              onClick={() => setActiveTab(work.id)}
+              className={`flex-shrink-0 px-4 py-2 text-xs whitespace-nowrap rounded-md border transition-all ${
+                activeTab === work.id
+                  ? 'text-emerald-300 border-emerald-400 bg-emerald-100/10'
+                  : 'text-slate-400 border-emerald-300/25 hover:border-emerald-300/50'
+              }`}
+            >
+              <img
+                className="w-3 h-3 mr-1 inline rounded-md"
+                src={work.favicon}
+                alt=""
+              />
+              {work.company}
+            </button>
+          ))}
+
+          <button
+            onClick={() => setActiveTab(workData.length + 1)}
+            className={`flex-shrink-0 px-4 py-2 text-xs whitespace-nowrap rounded-md border transition-all ${
+              activeTab === workData.length + 1
+                ? 'text-emerald-300 border-emerald-400 bg-emerald-100/10'
+                : 'text-slate-400 border-emerald-300/25 hover:border-emerald-300/50'
+            }`}
+          >
+            <img
+              className="w-3 h-3 mr-1 inline rounded-md"
+              src="https://png.pngtree.com/element_our/20190529/ourmid/pngtree-next-icon-image_1197594.jpg"
+              alt=""
+            />
+            Next
+          </button>
+        </div>
+
+        {/* Content display */}
+        <div className="bg-emerald-100/5 rounded-lg p-4 border border-emerald-300/20">
+          {workData.map((work) => (
+            <div
+              key={work.id}
+              className={`${
+                activeTab === work.id
+                  ? 'animate__animated animate__fadeIn'
+                  : 'hidden'
+              }`}
+            >
+              <h2 className="text-lightslate font-semibold text-base mb-2">{work.title}</h2>
+              <p className="text-sm text-slate-400 mb-3">{work.designation}</p>
+              
+              <div className="flex flex-wrap gap-2 mb-3 text-xs">
+                <span className="flex items-center gap-1 text-slate-400">
+                  <MdCalendarMonth className="w-3 h-3 text-emerald-400" />
+                  {work.start} - {work.end === '' ? 'Present' : work.end}
+                </span>
+                <span className="flex items-center gap-1 text-slate-400">
+                  <MdLocationOn className="w-3 h-3 text-emerald-400" />
+                  {work.location}
+                </span>
+                <span className="bg-cyan-500/40 px-2 py-1 text-cyan-200 rounded">
+                  {getExperienceDuration(work)}
+                </span>
+              </div>
+
+              <ul className="text-sm ml-4 list-outside tracking-wide marker:text-cyan-300 list-disc space-y-1 mb-3">
+                {work.discription.map((disc, idx) => (
+                  <li key={idx} className="text-slate-400">{disc}</li>
+                ))}
+              </ul>
+              
+              <div className="flex gap-4">
+                {work.git && (
+                  <a
+                    href={work.git}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-emerald-300 transition-colors"
+                  >
+                    <TbBrandGithub className="w-5 h-5" />
+                  </a>
+                )}
+                {work.website && (
+                  <a
+                    href={work.website}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-emerald-300 transition-colors"
+                  >
+                    <GoLinkExternal className="w-5 h-5" />
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+
+          <div
+            className={`${
+              activeTab === workData.length + 1
+                ? 'visibile animate__animated animate__fadeIn'
+                : 'hidden'
+            }`}
+          >
+            <h2 className="text-lightslate font-semibold text-base mb-2">Next at yours company</h2>
+            <p className="text-sm text-slate-400 mb-3">
+              This section will show a glimpse of projects i would be doing at
+              yours company. Wanna discuss the project? Tap on the below
+              button.
+            </p>
             <a
               href="mailto:s.himanshusingh56@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="m-5 inline-block px-4 py-2 text-sm border border-emerald-300 rounded-md hover:bg-emerald-100/10 hover:border-emerald-500 hover:text-lightslate cursor-pointer"
+              className="inline-block px-4 py-2 text-sm border border-emerald-300 rounded-md hover:bg-emerald-100/10 hover:border-emerald-500 hover:text-lightslate cursor-pointer transition-all"
             >
               Say Hello
             </a>
