@@ -1,11 +1,11 @@
 'use client'
 
 import React from 'react'
-import { GoLinkExternal } from 'react-icons/go'
-import { TbBrandGithub } from 'react-icons/tb'
 import Tilt from 'react-parallax-tilt'
 import projects from '@/lib/projects.json'
 import { Section } from './ui/Section'
+import { SectionHeader } from './ui/SectionHeader'
+import { ExternalLink } from './ui/ExternalLink'
 import 'animate.css'
 
 interface Project {
@@ -67,22 +67,18 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             ))}
           </div>
           <div className="m-2" onClick={(e) => e.stopPropagation()}>
-            <a
-              href={project.git}
+            <ExternalLink 
+              href={project.git} 
+              type="github" 
               title={`${project.title} git repository`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <TbBrandGithub className="inline mr-4 hover:fill-emerald-300 duration-200 w-5 h-5" />
-            </a>
-            <a
-              href={project.url}
+              className="inline mr-4"
+            />
+            <ExternalLink 
+              href={project.url} 
+              type="website" 
               title={`${project.title} website`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <GoLinkExternal className="inline hover:fill-emerald-300 duration-200 w-5 h-5" />
-            </a>
+              className="inline"
+            />
           </div>
         </div>
 
@@ -107,12 +103,7 @@ export const Projects: React.FC = () => {
 
   return (
     <Section id="projects" className="text-slate-400">
-      <div className="my-5 flex items-center gap-4">
-        <h1 className="capitalize text-lightestslate font-calibre text-3xl md:text-4xl font-semibold tracking-wide whitespace-nowrap">
-          Projects I have built
-        </h1>
-        <hr className="whitespace-nowrap w-1/6 h-px bg-lightestslate opacity-60" />
-      </div>
+      <SectionHeader title="Projects I have built" />
 
       <div>
         {visibleProjects.map((project, idx) => (

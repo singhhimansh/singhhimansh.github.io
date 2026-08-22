@@ -4,26 +4,12 @@ import React from 'react'
 import Typewriter from 'typewriter-effect'
 import Tilt from 'react-parallax-tilt'
 import workData from '@/lib/experience'
+import { calculateTotalExperience } from '@/lib/utils'
 import 'animate.css'
 import '@/public/profile/border-anim.css'
 
 export const Introduction: React.FC = () => {
-  const totalExperience = () => {
-    const totalExperienceInDays = workData.reduce((total, work) => {
-      const startDate = new Date(work.start)
-      const endDate = work.end ? new Date(work.end) : new Date()
-      const diff = endDate.getTime() - startDate.getTime()
-      return total + Math.ceil(diff / (1000 * 60 * 60 * 24))
-    }, 0)
-    const totalExperienceInYears = totalExperienceInDays / 365.25
-    if (totalExperienceInYears % 1 >= 0.7) {
-      return `around ${Math.ceil(totalExperienceInYears)}`
-    } else if (totalExperienceInYears % 1 <= 0.3) {
-      return `over ${Math.floor(totalExperienceInYears)}`
-    } else {
-      return `around ${Math.floor(totalExperienceInYears) + 0.5}`
-    }
-  }
+  const totalExperience = () => calculateTotalExperience(workData)
 
   return (
     <section

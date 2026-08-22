@@ -14,6 +14,8 @@ const navItems = [
   { label: 'contact', href: '#contact' },
 ]
 
+const resumeButtonStyles = "text-center hover:text-emerald-300 moveup duration-300 px-4 py-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90 cursor-pointer"
+
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -44,6 +46,18 @@ export const Navbar: React.FC = () => {
     </NavLink>
   )
 
+  const ResumeButton = ({ onClick, isMobile = false }: { onClick?: () => void; isMobile?: boolean }) => (
+    <NavLink
+      href={resume()}
+      target="_blank"
+      onClick={onClick}
+      className={`${isMobile ? 'md:hidden mr-4 text-sm px-3.5 py-1.5' : 'mx-2'} text-lightslate ${resumeButtonStyles}`}
+    >
+      <span className="text-emerald-300">h. </span>
+      resume()
+    </NavLink>
+  )
+
   return (
     <nav className="navbar p-6 animate__animated animate__fadeInDown relative z-50">
       <div className="flex flex-1 justify-between">
@@ -58,27 +72,13 @@ export const Navbar: React.FC = () => {
             {navItems.map((item) => (
               <NavButton key={item.label} label={item.label} href={item.href} />
             ))}
-            <NavLink
-              href={resume()}
-              target="_blank"
-              className="mx-2 text-center hover:text-emerald-300 moveup duration-300 px-4 py-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90 cursor-pointer"
-            >
-              <span className="text-emerald-300">h. </span>
-              resume()
-            </NavLink>
+            <ResumeButton />
           </div>
 
           {/* Mobile Menu */}
           <div className="align-middle md:flex md:items-center transition-all ease-in-out duration-500 flex items-center">
             {/* Mobile Resume Button */}
-            <NavLink
-              href={resume()}
-              target="_blank"
-              className="md:hidden mr-4 text-center  text-lightslate hover:text-emerald-300 moveup duration-300 px-3.5 py-1.5 text-sm hover:bg-emerald-100/5 rounded border border-emerald-300/90 cursor-pointer"
-            >
-              <span className="text-emerald-300">h. </span>
-              resume()
-            </NavLink>
+            <ResumeButton isMobile />
 
             <button
               title="menu"
@@ -109,15 +109,7 @@ export const Navbar: React.FC = () => {
                   onClick={closeMenu}
                 />
               ))}
-              <NavLink
-                href={resume()}
-                target="_blank"
-                onClick={closeMenu}
-                className="mx-2 text-center hover:text-emerald-300 moveup duration-300 px-4 py-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90 cursor-pointer"
-              >
-                <span className="text-emerald-300">h. </span>
-                resume()
-              </NavLink>
+              <ResumeButton onClick={closeMenu} />
             </div>
           </div>
         </div>

@@ -1,37 +1,22 @@
 'use client'
 
 import React, { useState } from 'react'
-import { TbBrandGithub } from 'react-icons/tb'
-import { GoLinkExternal } from 'react-icons/go'
 import { MdLocationOn, MdCalendarMonth } from 'react-icons/md'
 import workData from '@/lib/experience'
+import { calculateExperienceDuration } from '@/lib/utils'
 import { Section } from './ui/Section'
+import { SectionHeader } from './ui/SectionHeader'
+import { ExternalLink } from './ui/ExternalLink'
 import 'animate.css'
 
-export const WorkExperience: React.FC = () => {
-  const [activeTab, setActiveTab] = useState(workData.length)
+const NEXT_TAB_ID = -1
 
-  const getExperienceDuration = (work: typeof workData[0]) => {
-    const startDate = new Date(work.start)
-    const endDate = work.end ? new Date(work.end) : new Date()
-    const diff = endDate.getTime() - startDate.getTime()
-    const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25))
-    const months = Math.floor(
-      (diff % (1000 * 60 * 60 * 24 * 365.25)) / (1000 * 60 * 60 * 24 * 30),
-    )
-    return `${years > 0 ? `${years} years` : ''} ${
-      months > 0 ? `${months} months` : ''
-    }`
-  }
+export const WorkExperience: React.FC = () => {
+  const [activeTab, setActiveTab] = useState(NEXT_TAB_ID)
 
   return (
     <Section id="work" className="WorkTabs my-40">
-      <div className="my-5 flex items-center gap-4">
-        <h1 className="text-lightestslate font-calibre text-3xl md:text-4xl font-semibold capitalize tracking-wide whitespace-nowrap">
-          I have worked at
-        </h1>
-        <hr className="whitespace-nowrap w-1/6 h-1px bg-slate-400 opacity-60" />
-      </div>
+      <SectionHeader title="I have worked at" />
 
       {/* Tabbed layout (vertical tabs on left, content on right) */}
       <div className="hidden md:flex lg:w-4/5 min-h-[420px] md:min-h-[385px] lg:min-h-[320px] my-20 lg:m-16 flex gap-2 md:gap-3 text-slate-400 bg-emerald-100/5 rounded-md">
@@ -59,9 +44,9 @@ export const WorkExperience: React.FC = () => {
           ))}
 
           <button
-            onClick={() => setActiveTab(workData.length + 1)}
+            onClick={() => setActiveTab(NEXT_TAB_ID)}
             className={`p-3 px-4 w-full text-left whitespace-nowrap hover:text-emerald-300 hover:bg-emerald-100/10 duration-300 ${
-              activeTab === workData.length + 1
+              activeTab === NEXT_TAB_ID
                 ? 'text-emerald-300 border-l-2 border-emerald-400'
                 : 'border-l border-emerald-300/25'
             }`}
@@ -102,7 +87,7 @@ export const WorkExperience: React.FC = () => {
                 </p>
                 <p className="text-sm flex items-center gap-1 col-span-1">
                   <span className="bg-cyan-500/40 px-2 text-cyan-200 rounded">
-                    {getExperienceDuration(work)}
+                    {calculateExperienceDuration(work.start, work.end)}
                   </span>
                 </p>
               </div>
@@ -114,22 +99,10 @@ export const WorkExperience: React.FC = () => {
               </ul>
               <div className="m-3 px-2 gap-3 flex">
                 {work.git && (
-                  <a
-                    href={work.git}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <TbBrandGithub className="inline hover:fill-emerald-300 w-5 h-5" />
-                  </a>
+                  <ExternalLink href={work.git} type="github" title={`${work.company} GitHub`} />
                 )}
                 {work.website && (
-                  <a
-                    href={work.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <GoLinkExternal className="inline hover:fill-emerald-300 w-5 h-5" />
-                  </a>
+                  <ExternalLink href={work.website} type="website" title={`${work.company} Website`} />
                 )}
               </div>
             </div>
@@ -137,7 +110,7 @@ export const WorkExperience: React.FC = () => {
 
           <div
             className={`m-2 pr-3 ${
-              activeTab === workData.length + 1
+              activeTab === NEXT_TAB_ID
                 ? 'visibile animate__animated animate__fadeIn'
                 : 'invisible'
             }`}
@@ -187,9 +160,9 @@ export const WorkExperience: React.FC = () => {
           ))}
 
           <button
-            onClick={() => setActiveTab(workData.length + 1)}
+            onClick={() => setActiveTab(NEXT_TAB_ID)}
             className={`flex-shrink-0 px-4 py-2 text-xs whitespace-nowrap rounded-md border transition-all ${
-              activeTab === workData.length + 1
+              activeTab === NEXT_TAB_ID
                 ? 'text-emerald-300 border-emerald-400 bg-emerald-100/10'
                 : 'text-slate-400 border-emerald-300/25 hover:border-emerald-300/50'
             }`}
@@ -227,7 +200,7 @@ export const WorkExperience: React.FC = () => {
                   {work.location}
                 </span>
                 <span className="bg-cyan-500/40 px-2 py-1 text-cyan-200 rounded">
-                  {getExperienceDuration(work)}
+                  {calculateExperienceDuration(work.start, work.end)}
                 </span>
               </div>
 
@@ -239,24 +212,20 @@ export const WorkExperience: React.FC = () => {
               
               <div className="flex gap-4">
                 {work.git && (
-                  <a
-                    href={work.git}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <ExternalLink 
+                    href={work.git} 
+                    type="github" 
+                    title={`${work.company} GitHub`}
                     className="hover:text-emerald-300 transition-colors"
-                  >
-                    <TbBrandGithub className="w-5 h-5 fill-lightslate hover:fill-emerald-300" />
-                  </a>
+                  />
                 )}
                 {work.website && (
-                  <a
-                    href={work.website}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <ExternalLink 
+                    href={work.website} 
+                    type="website" 
+                    title={`${work.company} Website`}
                     className="hover:text-emerald-300 transition-colors"
-                  >
-                    <GoLinkExternal className="w-5 h-5 fill-lightslate hover:fill-emerald-300" />
-                  </a>
+                  />
                 )}
               </div>
             </div>
@@ -264,7 +233,7 @@ export const WorkExperience: React.FC = () => {
 
           <div
             className={`${
-              activeTab === workData.length + 1
+              activeTab === NEXT_TAB_ID
                 ? 'visibile animate__animated animate__fadeIn'
                 : 'hidden'
             }`}

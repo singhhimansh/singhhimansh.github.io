@@ -4,8 +4,8 @@ import React from 'react'
 import { HiOutlineMailOpen } from 'react-icons/hi'
 import { HiOutlinePhone } from 'react-icons/hi'
 import { SiWhatsapp } from 'react-icons/si'
-import { Button } from './ui/Button'
 import { Section } from './ui/Section'
+import { SectionHeader } from './ui/SectionHeader'
 import { contactInfo } from '@/lib/constants'
 
 export const Contact: React.FC = () => {
@@ -14,13 +14,7 @@ export const Contact: React.FC = () => {
       id="contact"
       className="my-36 md:w-2/3 font-calibre gap-10 flex flex-col items-center self-center"
     >
-      <div className="my-5 w-full flex items-center justify-center gap-4">
-        <hr className="whitespace-nowrap w-1/6 h-px bg-lightestslate opacity-60" />
-        <h1 className="text-lightestslate font-calibre text-3xl md:text-4xl font-semibold capitalize tracking-wide whitespace-nowrap">
-          Get in touch
-        </h1>
-        <hr className="whitespace-nowrap w-1/6 h-px bg-lightestslate opacity-60" />
-      </div>
+      <SectionHeader title="Get in touch" position="center" />
 
       <p className="mb-4 w-5/6 md:w-full text-lg text-defslate text-center first-letter:text-xl first-letter:font-medium first-letter:text-emerald-400 first-line:text-emerald-400/80">
         Hey there. Since you have reached down here, implies you must have
