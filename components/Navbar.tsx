@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { CgMenuRight } from 'react-icons/cg'
 import { IoClose } from 'react-icons/io5'
 import { NavLink } from './ui/NavLink'
@@ -25,6 +25,18 @@ export const Navbar: React.FC = () => {
     setIsOpen(false)
   }
 
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'unset'
+    }
+    return () => {
+      document.body.style.overflow = 'unset'
+    }
+  }, [isOpen])
+
   const NavButton = ({ label, href, onClick }: { label: string; href: string; onClick?: () => void }) => (
     <NavLink href={href} onClick={onClick} className="p-2 hover:text-emerald-300 moveup cursor-pointer">
       <span className="text-emerald-300">h. </span>
@@ -33,7 +45,7 @@ export const Navbar: React.FC = () => {
   )
 
   return (
-    <nav className="navbar p-6 animate__animated animate__fadeInDown">
+    <nav className="navbar p-6 animate__animated animate__fadeInDown relative z-50">
       <div className="flex flex-1 justify-between">
         {/* Logo */}
         <NavLink href="/" className="ml-6">
@@ -46,37 +58,63 @@ export const Navbar: React.FC = () => {
             {navItems.map((item) => (
               <NavButton key={item.label} label={item.label} href={item.href} />
             ))}
-            <NavLink href={resume()} target="_blank" className="mx-2 text-center hover:text-emerald-300 moveup duration-300 px-4 py-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90 cursor-pointer">
+            <NavLink
+              href={resume()}
+              target="_blank"
+              className="mx-2 text-center hover:text-emerald-300 moveup duration-300 px-4 py-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90 cursor-pointer"
+            >
               <span className="text-emerald-300">h. </span>
               resume()
             </NavLink>
           </div>
 
           {/* Mobile Menu */}
-          <div className="mr-4 align-middle md:flex md:items-center transition-all ease-in-out duration-500">
+          <div className="align-middle md:flex md:items-center transition-all ease-in-out duration-500 flex items-center">
+            {/* Mobile Resume Button */}
+            <NavLink
+              href={resume()}
+              target="_blank"
+              className="md:hidden mr-4 text-center  text-lightslate hover:text-emerald-300 moveup duration-300 px-3.5 py-1.5 text-sm hover:bg-emerald-100/5 rounded border border-emerald-300/90 cursor-pointer"
+            >
+              <span className="text-emerald-300">h. </span>
+              resume()
+            </NavLink>
+
             <button
               title="menu"
-              className={`relative text-3xl cursor-pointer mx-2 md:hidden block ${isOpen ? 'z-20' : ''}`}
+              className={`relative text-3xl cursor-pointer mr-4 md:hidden block z-[100]`}
               onClick={toggleMenu}
               aria-label="Toggle menu"
             >
               <CgMenuRight
-                className={`w-9 h-9 stroke-1 ${isOpen ? 'hidden' : 'stroke-defslate'}`}
+                className={`w-9 h-9 stroke-1 ${isOpen ? "hidden" : "stroke-defslate"}`}
               />
               <IoClose
-                className={`w-9 h-9 stroke-1 ${isOpen ? 'fill-emerald-600/70 animate__animated animate__rotateIn animate__faster' : 'hidden'}`}
+                className={`w-9 h-9 stroke-1 ${isOpen ? "fill-emerald-600/70 animate__animated animate__rotateIn animate__faster" : "hidden"}`}
               />
             </button>
 
             <div
-              className={`h-screen md:hidden fixed z-10 font-calibre text-lightslate bg-zinc-800 flex flex-col justify-center items-center gap-10 ${
-                isOpen ? 'w-2/3 top-0 right-0 touch-none duration-200 ease-in-out transition-all' : 'hidden top-0 right-0'
+              className={`h-screen md:hidden fixed z-40 font-calibre text-lightslate bg-zinc-800 flex flex-col justify-center items-center gap-10 ${
+                isOpen
+                  ? "w-2/3 top-0 right-0 touch-none duration-200 ease-in-out transition-all"
+                  : "hidden top-0 right-0"
               }`}
             >
               {navItems.map((item) => (
-                <NavButton key={item.label} label={item.label} href={item.href} onClick={closeMenu} />
+                <NavButton
+                  key={item.label}
+                  label={item.label}
+                  href={item.href}
+                  onClick={closeMenu}
+                />
               ))}
-              <NavLink href={resume()} target="_blank" onClick={closeMenu} className="mx-2 text-center hover:text-emerald-300 moveup duration-300 px-4 py-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90 cursor-pointer">
+              <NavLink
+                href={resume()}
+                target="_blank"
+                onClick={closeMenu}
+                className="mx-2 text-center hover:text-emerald-300 moveup duration-300 px-4 py-2 hover:bg-emerald-100/5 rounded border border-emerald-300/90 cursor-pointer"
+              >
                 <span className="text-emerald-300">h. </span>
                 resume()
               </NavLink>
@@ -85,5 +123,5 @@ export const Navbar: React.FC = () => {
         </div>
       </div>
     </nav>
-  )
+  );
 }
