@@ -11,7 +11,7 @@ interface SkillCardProps {
 
 const SkillCard: React.FC<SkillCardProps> = ({ skill }) => {
   return (
-    <Tilt scale="1.4" tiltMaxAngleX={50} tiltMaxAngleY={50} transitionSpeed={2500}>
+    <Tilt scale={1.4} tiltMaxAngleX={50} tiltMaxAngleY={50} transitionSpeed={2500}>
       <img
         className="w-12 shrink m-3 object-scale-down grayscale hover:grayscale-0 hover:scale-105 transition"
         title={skill}
