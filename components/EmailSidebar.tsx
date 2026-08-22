@@ -7,8 +7,8 @@ import "animate.css";
 export const EmailSidebar: React.FC = () => {
   return (
     <div className="w-6 h-[359px] fixed bottom-0 right-14 flex flex-col justify-between invisible md:visible animate__animated animate__fadeInUp">
-      <div className="moveup rotate-90">
-        <span className="moveup text-[13px] tracking-widest font-mono text-lightslate hover:text-emerald-300 hover:fill-emerald-300">
+      <div className="rotate-90 hover:rotate-90 -translate-y-1 hover:-translate-y-3 transition-transform duration-300">
+        <span className=" text-[13px] tracking-widest font-mono text-lightslate hover:text-emerald-300 hover:fill-emerald-300">
           <a
             title={contactInfo.email}
             href={`mailto:${contactInfo.email}`}

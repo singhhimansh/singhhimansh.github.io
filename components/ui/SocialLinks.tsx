@@ -13,27 +13,27 @@ const socialLinks: SocialLink[] = [
   {
     name: "github",
     href: "https://github.com/singhhimansh/",
-    icon: <FaGithub className="w-5 h-5" />,
+    icon: <FaGithub className="w-5 h-5 fill-lightslate hover:fill-emerald-300" />,
   },
   {
     name: "linkedin",
     href: "https://www.linkedin.com/in/singhhimansh/",
-    icon: <FaLinkedin className="w-5 h-5" />,
+    icon: <FaLinkedin className="w-5 h-5 fill-lightslate hover:fill-emerald-300" />,
   },
   {
     name: "instagram",
     href: "https://www.instagram.com/himanshhh_/",
-    icon: <GrInstagram className="w-5 h-5" />,
+    icon: <GrInstagram className="w-5 h-5 fill-lightslate hover:fill-emerald-300" />,
   },
   {
     name: "facebook",
     href: "https://www.facebook.com/him.signum/",
-    icon: <FaFacebook className="w-5 h-5" />,
+    icon: <FaFacebook className="w-5 h-5 fill-lightslate hover:fill-emerald-300" />,
   },
   {
     name: "linktree",
     href: "https://linktr.ee/himanshhh_",
-    icon: <SiLinktree className="w-5 h-5" />,
+    icon: <SiLinktree className="w-5 h-5 fill-lightslate hover:fill-emerald-300" />,
   },
 ];
 
