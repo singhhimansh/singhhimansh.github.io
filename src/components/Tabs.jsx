@@ -42,7 +42,7 @@ export default function Tabs() {
       </div>
 
       {/* Tabs */}
-      <div className="md:w-3/4 lg:w-4/5 min-h-[420px] md:min-h-[385px] lg:min-h-[320px] my-20 md:m-16 flex gap-2 md:gap-3 text-slate-400 bg-emerald-100/5  rounded-md ">
+      <div className="lg:w-4/5  min-h-[420px] md:min-h-[385px] lg:min-h-[320px] my-20 lg:m-16 flex gap-2 md:gap-3 text-slate-400 bg-emerald-100/5  rounded-md ">
         {/* tab buttons list */}
         <div className=" flex flex-col text-xs md:text-sm ">
           {experience?.map((work) => {

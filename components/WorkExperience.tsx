@@ -34,7 +34,7 @@ export const WorkExperience: React.FC = () => {
       </div>
 
       {/* Tabbed layout (vertical tabs on left, content on right) */}
-      <div className="hidden md:flex md:w-3/4 lg:w-4/5 min-h-[420px] md:min-h-[385px] lg:min-h-[320px] my-20 md:m-16 flex gap-2 md:gap-3 text-slate-400 bg-emerald-100/5 rounded-md">
+      <div className="hidden md:flex lg:w-4/5 min-h-[420px] md:min-h-[385px] lg:min-h-[320px] my-20 lg:m-16 flex gap-2 md:gap-3 text-slate-400 bg-emerald-100/5 rounded-md">
         {/* Tab buttons */}
         <div className="flex flex-col text-xs md:text-sm">
           {workData.map((work) => (
@@ -245,7 +245,7 @@ export const WorkExperience: React.FC = () => {
                     rel="noopener noreferrer"
                     className="hover:text-emerald-300 transition-colors"
                   >
-                    <TbBrandGithub className="w-5 h-5" />
+                    <TbBrandGithub className="w-5 h-5 fill-lightslate hover:fill-emerald-300" />
                   </a>
                 )}
                 {work.website && (
@@ -255,7 +255,7 @@ export const WorkExperience: React.FC = () => {
                     rel="noopener noreferrer"
                     className="hover:text-emerald-300 transition-colors"
                   >
-                    <GoLinkExternal className="w-5 h-5" />
+                    <GoLinkExternal className="w-5 h-5 fill-lightslate hover:fill-emerald-300" />
                   </a>
                 )}
               </div>
@@ -279,7 +279,7 @@ export const WorkExperience: React.FC = () => {
               href="mailto:s.himanshusingh56@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-4 py-2 text-sm border border-emerald-300 rounded-md hover:bg-emerald-100/10 hover:border-emerald-500 hover:text-lightslate cursor-pointer transition-all"
+              className="inline-block px-4 text-lightslate py-2 text-sm border border-emerald-300 rounded-md hover:bg-emerald-100/10 hover:border-emerald-500 hover:text-lightslate cursor-pointer transition-all"
             >
               Say Hello
             </a>
